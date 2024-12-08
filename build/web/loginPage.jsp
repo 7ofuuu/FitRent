@@ -11,12 +11,9 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
         <script src="https://cdn.tailwindcss.com"></script>
-        <title>JSP Page</title>
+        <title>Sign in Page</title>
     </head>
     <body >
-        <!--<h1>Ini halaman login</h1>-->
-
-
 
         <div class="flex items-center justify-center min-h-screen bg-gray-100">
             <div
@@ -24,15 +21,15 @@
                 >
                 <!-- left side -->
                 <div class=" flex flex-col justify-center p-8 md:p-14">
-                    <span class="mb-3 text-4xl font-bold">Welcome back</span>
+                    <span class="mb-3 text-4xl font-bold">Welcome to <a href="index.jsp">Fitrent</a></span>
                     <span class="font-light text-gray-400 mb-8">
-                        Welcom back! Please enter your details
+                        Welcome back! Please enter your details
                     </span>
                     <div class="py-4">
                         <span class="mb-2 text-md">Email</span>
                         <input
                             type="text"
-                            class="w-full p-2 border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-500"
+                            class="w-full p-2 border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-500" placeholder="name@company.com" required=""
                             name="email"
                             id="email"
                             />
@@ -43,7 +40,7 @@
                             type="password"
                             name="pass"
                             id="pass"
-                            class="w-full p-2 border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-500"
+                            class="w-full p-2 border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-500"  placeholder="••••••••" required=""
                             />
                     </div>
                    
@@ -65,15 +62,6 @@
                         alt="img"
                         class=" w-[550px] h-full hidden rounded-r-2xl md:block object-cover"
                         />
-                    <!-- text on image  -->
-<!--                    <div
-                        class="absolute hidden bottom-10 right-6 p-6 bg-white bg-opacity-30 backdrop-blur-sm rounded drop-shadow-lg md:block"
-                        >
-                        <span class="text-white text-xl"
-                              >We've been uesing Untitle to kick"<br />start every new project
-                            and can't <br />imagine working without it."
-                        </span>
-                    </div>-->
                 </div>
             </div>
         </div>
