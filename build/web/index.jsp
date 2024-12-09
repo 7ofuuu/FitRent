@@ -14,23 +14,106 @@
         <title>Fitrent</title>
     </head>
     <body class="pb-8">
-        <nav class=" w-full h-16 px-12 py-3 flex justify-between ">
-            <h2 class="text-2xl font-extrabold ">Fitrent</h2>
-            <li class="flex w-56 justify-between ">
-                <a href="registerPage.jsp" class="border-2 border-[#195575] rounded-md px-6 py-2 text-sm text-[#195575] font-semibold hover:bg-[#195575] hover:text-white">SIGN UP</a>
-                <a href="loginPage.jsp" class=" bg-[#195575] rounded-md px-6 py-2 text-sm text-white font-semibold  hover:bg-white hover:text-[#195575] hover:border-2 hover:border-[#195575]">SIGN IN</a>
-            </li>
+        <nav>
+            <div class="px-6 container mx-auto flex items-center justify-between py-5">
+                <a href="" class="w-32"><img src="img/logo.png" /></a>
+                <div class="hidden md:inline space-x-6 font-semibold">
+                    <a class="hover:text-sky-600" href="">Pricing</a>
+                    <a class="hover:text-sky-600" href="">Product</a>
+                    <a class="hover:text-sky-600" href="">About Us</a>
+                    <a class="hover:text-sky-600" href="">Career</a>
+                    <a class="hover:text-sky-600" href="">Community</a>
+                </div>
+                <a href="registerPage.jsp" class="hidden md:inline bg-sky-600 text-white px-4 py-2 rounded-3xl">Create Account</a>
+                <img src="img/icon-hamburger.svg" class="hamburger md:hidden" />
+            </div>
+            <!-- mobile menu -->
+            <div class="md:hidden">
+                <div class="menu absolute top-16 container hidden flex-col bg-white shadow-md inset-x-0 mx-auto px-6 py-5">
+                    <a class="hover:text-sky-600" href="">Pricing</a>
+                    <a class="hover:text-sky-600" href="">Product</a>
+                    <a class="hover:text-sky-600" href="">About Us</a>
+                    <a class="hover:text-sky-600" href="">Career</a>
+                    <a class="hover:text-sky-600" href="">Community</a>
+                    <a class="hover:text-sky-600" href="registerPage.jsp">Create Account</a>
+                </div>
+            </div>
         </nav>
 
-        
-
-        <div class="h-100vh">
-           
-        </div>
-
-
-
-
+        <!-- hero section-->
+        <section class="px-6 container mx-auto md:flex md:justify-between items-center my-6 space-x-6">
+            <div class="md:w-3/6 text-center md:text-left">
+                <h4 class="text-xl font-bold">New Feature</h4>
+                <h3 class="text-5xl font-bold mb-5">Coming Up With Fresh Ideas</h3>
+                <p class="text-gray-500 mb-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam facere ea totam labore vitae autem.</p>
+                <button class="bg-sky-600 text-white px-4 py-2 rounded-3xl">Create Account</button>
+            </div>
+            <img class="md:w-3/6" src="img/hero.jpg" />
+        </section>
+        <!-- partner -->
+<!--        <section class="bg-gray-100 p-10 my-5">
+            <div class="container mx-auto grid grid-cols-2 gap-5 justify-items-center md:flex md:justify-around items-center max-w-5xl">
+                <img class="w-32" src="img/bootstrap.png" alt="" />
+                <img class="w-32" src="img/dribbble.png" alt="" />
+                <img class="w-32" src="img/envato.png" alt="" />
+                <img class="w-32" src="img/instagram.png" alt="" />
+                <img class="w-32" src="img/jquery.png" alt="" />
+            </div>
+        </section>-->
+        <!-- statistic-->
+        <section class="container mx-auto space-x-6 md:flex md:justify-between items-center">
+            <img src="img/stat.jpg" class="w-3/4 md:w-3/6 mx-auto" alt="" />
+            <div class="md:w-3/6 text-center md:text-left">
+                <h4 class="text-xl font-bold">Statistic</h4>
+                <h3 class="text-3xl font-bold mb-5">What We Can Do For You</h3>
+                <p class="text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel alias cupiditate, dolores sunt similique expedita atque consequuntur obcaecati aspernatur est?</p>
+                <div class="flex justify-between py-6 max-w-80 mx-auto">
+                    <!-- portfolio-->
+                    <div class="text-center text-gray-500">
+                        <h4 class="text-2xl font-bold text-gray-900">20+</h4>
+                        <p>Portfolios</p>
+                    </div>
+                    <!-- Clients -->
+                    <div class="text-center text-gray-500">
+                        <h4 class="text-2xl font-bold text-gray-900">100+</h4>
+                        <p>Clients</p>
+                    </div>
+                    <!-- portfolio-->
+                    <div class="text-center text-gray-500">
+                        <h4 class="text-2xl font-bold text-gray-900">4.8</h4>
+                        <p>Rating</p>
+                    </div>
+                </div>
+                <p class="text-gray-500 mb-4"><span class="font-bold">info</span> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem, voluptatibus?</p>
+                <button class="bg-sky-600 text-white px-4 py-2 rounded-3xl">Detail</button>
+            </div>
+        </section>
+        <!-- testimonies -->
+        <section class="container mx-auto p-10 my-5 text-center">
+            <h4 class="text-xl font-bold">Testimonies</h4>
+            <h3 class="text-3xl font-bold mb-5">What They Say About Us</h3>
+            <div class="md:flex md:justify-between mt-16 space-x-8">
+                <!-- person 1-->
+                <div class="bg-gray-100 md:w-1/3 rounded-md border border-gray-200">
+                    <img class="w-16 rounded-full mx-auto -mt-8" src="img/person1.jpg" />
+                    <h5 class="font-bold pt-5">John Saleh</h5>
+                    <p class="p-5 text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, odio.</p>
+                </div>
+                <!-- person 2-->
+                <div class="hidden md:inline bg-gray-100 w-1/3 rounded-md border border-gray-200">
+                    <img class="w-16 rounded-full mx-auto -mt-8" src="img/person2.jpg" />
+                    <h5 class="font-bold pt-5">Bob Smith</h5>
+                    <p class="p-5 text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, odio.</p>
+                </div>
+                <!-- person 3-->
+                <div class="hidden md:inline bg-gray-100 w-1/3 rounded-md border border-gray-200">
+                    <img class="w-16 rounded-full mx-auto -mt-8" src="img/person3.jpg" />
+                    <h5 class="font-bold pt-5">Alex White</h5>
+                    <p class="p-5 text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, odio.</p>
+                </div>
+            </div>
+            <button class="bg-sky-600 text-white px-4 py-2 rounded-3xl mt-6">See All Testimonies</button>
+        </section>
         <footer class="flex md:flex-row flex-col items-center mt-24 gap-3 justify-center font-medium">
             <p class="text-slate-800">
                 Built with 💖 by Fitrent Dev
