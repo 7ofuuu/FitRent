@@ -6,21 +6,20 @@ package models;
 
 /**
  *
- * @author ilham
+ * @author Lenovo
  */
-public class User extends Account {
-    private String userID;
+public class Finance extends Account{
+    private String FinanceID;
     private int balance;
-    //priavate Sewa[] daftarSewa;
 
-    public User(String userID, String username, String password) {
+    public Finance(String username, String password, String FinanceID) {
         super(username, password);
-        this.userID = userID;
+        this.FinanceID = FinanceID;
         this.balance = 0;
     }
 
-    public String getUserID() {
-        return userID;
+    public String getFinanceID() {
+        return FinanceID;
     }
 
     public int getBalance() {
@@ -34,7 +33,7 @@ public class User extends Account {
     @Override
     public String Authentication(String username, String password) {
         if (username.equals(super.getUsername()) && password.equals(super.getPassword())) {
-            return this.getUserID();
+            return this.getFinanceID();
         }
         return null;
     }
@@ -45,8 +44,6 @@ public class User extends Account {
         } else if (action.equals("kirim")) {
             this.setBalance(this.getBalance() - amount);
         }
-    }
+    }    
     
-    //jika data penyewaan pengguna disimpan di class dan bukan di database, maka buat method tambahSewa, hapusSewa, liatSewa.
 }
-
