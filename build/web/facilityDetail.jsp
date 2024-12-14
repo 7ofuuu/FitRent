@@ -1,6 +1,6 @@
 <%-- 
-    Document   : userHome
-    Created on : 10 Dec 2024, 10.57.14
+    Document   : facilityDetail
+    Created on : 11 Dec 2024, 20.23.33
     Author     : ilham
 --%>
 
@@ -9,12 +9,14 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <!--<style src="<%=request.getContextPath()%>/style/style.css"></style>-->
         <style><%@include file="/style/style.css"%></style>
         <script src="https://cdn.tailwindcss.com"></script>
         <title>JSP Page</title>
     </head>
     <body>
+
+    <body>
+        <!-- Header -->
         <nav class=" flex items-center justify-between px-14 py-4 border-b">
             <!-- Logo -->
             <div class="flex items-center space-x-2">
@@ -70,69 +72,70 @@
                 <div class="w-8 h-8 bg-gray-400 rounded-full"></div>
             </div>
         </nav>
-        <!-- Filter Bar -->
-        <div class="flex items-center justify-between px-14 py-4 bg-white border-b">
-            <div class="container mx-auto px-6 py-4">
-                <div class="flex space-x-4 overflow-x-auto no-scrollbar">
-                    <button class="flex-none text-sm font-medium border-b-2 border-black px-4 py-2">Rumah kecil</button>
-                    <button class="flex-none text-sm text-gray-500 px-4 py-2">Ikon Pop</button>
-                    <button class="flex-none text-sm text-gray-500 px-4 py-2">Pemandangan cantik</button>
-                    <button class="flex-none text-sm text-gray-500 px-4 py-2">Wow!</button>
-                    <button class="flex-none text-sm text-gray-500 px-4 py-2">Baru</button>
-                    <button class="flex-none text-sm text-gray-500 px-4 py-2">Rumah A</button>
-                    <button class="flex-none text-sm text-gray-500 px-4 py-2">Kolam renang keren</button>
-                    <button class="flex-none text-sm text-gray-500 px-4 py-2">Lainnya</button>
-                </div>
-            </div>
-            <div class="flex items-center space-x-4">
-                <button class="flex items-center px-4 py-2 text-gray-500 border rounded-lg">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 mr-2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16m-7 5h7" />
-                    </svg>
-                    Filter
-                </button>
 
-            </div>
-        </div>
+        <!-- Main Content -->
+        <main class="container mx-auto p-4">
+            <!-- Title and Images -->
+            <section class="bg-white shadow rounded-lg p-6">
+                <h2 class="text-2xl font-bold mb-4">Vila tepi pantai seluas 7.000 meter persegi, mansion papan atas, layanan terbaik 12BR</h2>
+                <div class="grid grid-cols-2 gap-4 mb-6">
+                    <img src="https://via.placeholder.com/600x400" alt="Villa image" class="rounded-lg">
+                    <div class="grid grid-cols-2 gap-4">
+                        <img src="https://via.placeholder.com/300x200" alt="Image 1" class="rounded-lg">
+                        <img src="https://via.placeholder.com/300x200" alt="Image 2" class="rounded-lg">
+                        <img src="https://via.placeholder.com/300x200" alt="Image 3" class="rounded-lg">
+                        <img src="https://via.placeholder.com/300x200" alt="Image 4" class="rounded-lg">
+                    </div>
+                </div>
 
-        <!-- Card Grid -->
-        <div class="grid grid-cols-1 gap-6 px-14 py-8 md:grid-cols-2 lg:grid-cols-4">
-            <!-- Card 1 -->
-            <a href="facilityDetail.jsp" class="bg-white rounded-lg shadow">
-                <div class="relative">
-                    <img src="https://via.placeholder.com/300x200" alt="House" class="w-full rounded-t-lg">
-                    <button class="absolute top-3 right-3 p-2 bg-white rounded-full shadow">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 text-gray-500">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 21l-9-9 3-3L12 3l9 9-3 3z" />
-                        </svg>
-                    </button>
+                <!-- Details -->
+                <div class="grid grid-cols-3 gap-4">
+                    <div>
+                        <h3 class="text-xl font-bold">Seluruh rumah di Pa Klok, Thailand</h3>
+                        <p class="text-gray-600">12 tamu · 12 kamar tidur · 15 kamar mandi</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold">Fasilitas yang ditawarkan</h4>
+                        <ul class="list-disc list-inside">
+                            <li>Pemandangan teluk</li>
+                            <li>Akses ke pantai</li>
+                            <li>WiFi</li>
+                            <li>Bak mandi air panas</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold">Harga</h4>
+                        <p class="text-gray-800 text-lg font-bold">Rp94.364.509/malam</p>
+                        <button class="mt-4 bg-red-500 text-white py-2 px-4 rounded">Pesan</button>
+                    </div>
                 </div>
-                <div class="p-4">
-                    <h3 class="text-sm font-semibold">Takut Tai, Thailand</h3>
-                    <p class="text-sm text-gray-500">Berjarak 1.922 kilometer</p>
-                    <p class="text-sm text-gray-500">11–16 Des</p>
-                    <p class="mt-2 font-semibold">Rp1.109.849 malam</p>
-                </div>
-            </a>
+            </section>
 
-            <!-- Card 2 -->
-            <div class="bg-white rounded-lg shadow">
-                <div class="relative">
-                    <img src="https://via.placeholder.com/300x200" alt="House" class="w-full rounded-t-lg">
-                    <button class="absolute top-3 right-3 p-2 bg-white rounded-full shadow">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 text-gray-500">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 21l-9-9 3-3L12 3l9 9-3 3z" />
-                        </svg>
-                    </button>
+            <!-- Map and Reviews -->
+            <section class="mt-6 grid grid-cols-3 gap-4">
+                <!-- Map -->
+                <div class="col-span-2 bg-white shadow rounded-lg p-6">
+                    <h4 class="font-bold mb-2">Lokasi Anda</h4>
+                    <div class="w-full h-64 bg-gray-300 flex items-center justify-center rounded-lg">
+                        <span>Peta di sini</span>
+                    </div>
                 </div>
-                <div class="p-4">
-                    <h3 class="text-sm font-semibold">Tambon Huai Sat Yai, Thailand</h3>
-                    <p class="text-sm text-gray-500">Berjarak 2.222 kilometer</p>
-                    <p class="text-sm text-gray-500">5–10 Jan</p>
-                    <p class="mt-2 font-semibold">Rp754.029 malam</p>
+
+                <!-- Host Info -->
+                <div class="bg-white shadow rounded-lg p-6">
+                    <h4 class="font-bold mb-2">Tuan Rumah Anda</h4>
+                    <div class="flex items-center space-x-4">
+                        <div class="bg-gray-200 w-16 h-16 rounded-full"></div>
+                        <div>
+                            <p class="font-semibold">Wood</p>
+                            <p class="text-gray-600">297 ulasan (4.74)</p>
+                        </div>
+                    </div>
+                    <button class="mt-4 bg-blue-500 text-white py-2 px-4 rounded">Kirimkan Pesan</button>
                 </div>
-            </div>
-        </div>
+            </section>
+        </main>
         <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+
     </body>
 </html>

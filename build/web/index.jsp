@@ -22,30 +22,11 @@
                 <img class="w-24" src="<%=request.getContextPath()%>/assets/logo.svg" alt="alt"/>
             </div>
 
-            <!-- Search bar -->
-            <div class="px-1 flex items-center ">
-                <div class="hidden md:inline space-x-6 font-semibold">
-                    <a class="hover:text-sky-600" href="">Pricing</a>
-                    <a class="hover:text-sky-600" href="">Product</a>
-                    <!--<a class="hover:text-sky-600" href="">Pricing</a>-->
-                    <a class="hover:text-sky-600" href="">Services</a>
-                    <a class="hover:text-sky-600" href="">About Us</a>
-                    <a class="hover:text-sky-600" href="">Career</a>
-                    <!--<a class="hover:text-sky-600" href="">Career</a>-->
-                    <a class="hover:text-sky-600" href="">Community</a>
-                </div>
+            <div class="space-x-4">
+                <a href="loginPage.jsp" class="hidden md:inline bg-sky-600 text-white px-4 py-2 rounded-full">Sign in</a>
+                <a href="registerPage.jsp" class="hidden md:inline bg-sky-600 text-white px-4 py-2 rounded-full">Sign up</a>
             </div>
 
-            <!-- Profile and Menu -->
-            <div class="flex items-center space-x-4">
-                <!--<span class="text-sm text-gray-600 cursor-pointer">Jadikan rumah Anda Airbnb</span>-->
-                <button class="flex items-center justify-center w-8 h-8 bg-gray-200 rounded-full">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 text-gray-600">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 6h10.5M6.75 12h10.5m-10.5 6h10.5" />
-                    </svg>
-                </button>
-                <div class="w-8 h-8 bg-gray-400 rounded-full"></div>
-            </div>
         </nav>
 
         <!-- hero section-->
@@ -121,7 +102,7 @@
         </footer>
 
 
-     
+
 
         <!--<script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>-->
     </body>
