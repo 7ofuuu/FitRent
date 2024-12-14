@@ -14,34 +14,19 @@
         <title>Fitrent</title>
     </head>
     <body class="pb-8">
-        <nav>
-            <div class="px-6 container mx-auto flex items-center justify-between py-5">
-                <!--<a href="" class="w-32"><img src="img/logo.png" /></a>-->
-                <p class="text-3xl font-bold">Fitrent</p>
-                <div class="hidden md:inline space-x-6 font-semibold">
-                    <!--<a class="hover:text-sky-600" href="">Pricing</a>-->
-                    <a class="hover:text-sky-600" href="">Services</a>
-                    <a class="hover:text-sky-600" href="">About Us</a>
-                    <!--<a class="hover:text-sky-600" href="">Career</a>-->
-                    <a class="hover:text-sky-600" href="">Community</a>
-                </div>
-                <div class="space-x-2">
-                    <a href="loginPage.jsp" class="hidden md:inline bg-sky-600 text-white px-4 py-2 rounded-3xl">Sign in</a>
-                    <a href="registerPage.jsp" class="hidden md:inline bg-sky-600 text-white px-4 py-2 rounded-3xl">Sign up</a>
-                </div>
-                <img src="img/icon-hamburger.svg" class="hamburger md:hidden" />
+        <nav class=" flex items-center justify-between px-36 py-4 border-b">
+            <!-- Logo -->
+            <div class="flex items-center space-x-2">
+                <!--<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_B%C3%A9lo.svg/1024px-Airbnb_Logo_B%C3%A9lo.svg.png" alt="Logo" class="h-6">-->
+                <!--<span class="text-lg font-semibold">Fitrent</span>-->
+                <img class="w-24" src="<%=request.getContextPath()%>/assets/logo.svg" alt="alt"/>
             </div>
-            <!-- mobile menu -->
-            <div class="md:hidden">
-                <div class="menu absolute top-16 container hidden flex-col bg-white shadow-md inset-x-0 mx-auto px-6 py-5">
-                    <a class="hover:text-sky-600" href="">Pricing</a>
-                    <a class="hover:text-sky-600" href="">Product</a>
-                    <a class="hover:text-sky-600" href="">About Us</a>
-                    <a class="hover:text-sky-600" href="">Career</a>
-                    <a class="hover:text-sky-600" href="">Community</a>
-                    <a class="hover:text-sky-600" href="registerPage.jsp">Create Account</a>
-                </div>
+
+            <div class="space-x-4">
+                <a href="loginPage.jsp" class="hidden md:inline bg-sky-600 text-white px-4 py-2 rounded-full">Sign in</a>
+                <a href="registerPage.jsp" class="hidden md:inline bg-sky-600 text-white px-4 py-2 rounded-full">Sign up</a>
             </div>
+
         </nav>
 
         <!-- hero section-->
@@ -50,7 +35,8 @@
                 <h4 class="text-xl font-bold">New Feature</h4>
                 <h3 class="text-5xl font-bold mb-5">Coming Up With Fresh Ideas</h3>
                 <p class="text-gray-500 mb-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam facere ea totam labore vitae autem.</p>
-                <a href="registerPage.jsp" class="bg-sky-600 text-white px-4 py-2 rounded-3xl">Create Account</a>
+                <!--<a href="registerPage.jsp" class="bg-sky-600 text-white px-4 py-2 rounded-3xl">Create Account</a>-->
+                <button id="myButton" onclick="openDialog();"  class="bg-sky-600 text-white px-4 py-2 rounded-3xl">Create Account</button>
             </div>
             <img class="md:w-2/5" src="<%=request.getContextPath()%>/assets/hero1.jpg" />
         </section>
