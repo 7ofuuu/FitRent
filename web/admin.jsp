@@ -142,6 +142,14 @@
             <section id="schedule" class="mb-8">
                 <h1 class="text-3xl font-bold mb-4">Lihat Jadwal Lapangan</h1>
                 <div class="mb-4">
+                    <label for="FacilitySelect" class="block text-gray-700 font-semibold mb-2">Pilih Fasilitas</label>
+                     <select id="FacilitySelect" class="w-full border border-gray-300 rounded px-3 py-2">
+                         <option value="1">Lapangan A</option>
+                                <option value="2">Lapangan B</option>
+                                <option value="3">Lapangan C</option>  
+                    </select>
+                </div>
+                <div class="mb-4">
                     <label for="dateSelect" class="block text-gray-700 font-semibold mb-2">Pilih Tanggal</label>
                     <select id="dateSelect" class="w-full border border-gray-300 rounded px-3 py-2">
                         <!-- Tanggal akan dimuat dengan JavaScript -->
