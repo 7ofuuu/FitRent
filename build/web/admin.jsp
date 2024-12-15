@@ -10,6 +10,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Admin Control Panel for managing fields and schedules">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Admin Control Panel</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -26,6 +28,20 @@
             }
         }
 
+        function clearSchedule() {
+            if (confirm("Apakah Anda yakin ingin mengosongkan semua jadwal?")) {
+                document.getElementById('scheduleTableBody').innerHTML = '';
+                alert("Jadwal telah dikosongkan.");
+            }
+        }
+
+        function deleteSchedule(row) {
+            if (confirm("Apakah Anda yakin ingin menghapus jadwal ini?")) {
+                row.parentElement.parentElement.remove();
+                alert("Jadwal berhasil dihapus.");
+            }
+        }
+
         window.onload = loadDates;
     </script>
 </head>
@@ -33,12 +49,19 @@
     <div class="flex min-h-screen">
         <!-- Sidebar -->
         <aside class="w-64 bg-gray-800 text-white p-6">
-            <h2 class="text-2xl font-bold mb-4">Admin Panel</h2>
+            <h2 class="text-2xl font-bold mb-4">
+                 <!-- Logo -->
+            <div class="flex items-center space-x-2">
+                <!--<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_B%C3%A9lo.svg/1024px-Airbnb_Logo_B%C3%A9lo.svg.png" alt="Logo" class="h-6">-->
+                <!--<span class="text-lg font-semibold">Fitrent</span>-->
+                <img class="w-24" src="<%=request.getContextPath()%>/assets/logo.svg" alt="alt"/>
+            </div>
+            </h2>
             <nav class="space-y-2">
                 <a href="#dashboard" class="block py-2 px-4 rounded hover:bg-gray-700">Dashboard</a>
                 <a href="#addField" class="block py-2 px-4 rounded hover:bg-gray-700">Tambah Lapangan</a>
                 <a href="#schedule" class="block py-2 px-4 rounded hover:bg-gray-700">Lihat Jadwal Lapangan</a>
-                <a href="#clear" class="block py-2 px-4 rounded hover:bg-gray-700">Kosongkan Jadwal</a>
+                <a href="#clear" onclick="clearSchedule()" class="block py-2 px-4 rounded hover:bg-gray-700">Kosongkan Jadwal</a>
             </nav>
         </aside>
 
@@ -50,7 +73,6 @@
                 <div class="bg-white shadow rounded p-6 mb-6">
                     <h2 class="text-xl font-semibold mb-2">Pengumuman</h2>
                     <div id="announcements" class="text-gray-700 space-y-4">
-                        <!-- Pengumuman akan ditampilkan di sini -->
                         <div class="bg-gray-100 p-4 rounded flex justify-between items-center">
                             <p>Belum ada pengumuman.</p>
                         </div>
@@ -76,7 +98,6 @@
                     </form>
                 </div>
             </section>
-
             <!-- Manage Announcements Section -->
             <section id="manageAnnouncements" class="mb-8">
                 <h1 class="text-3xl font-bold mb-4">Kelola Pengumuman</h1>
@@ -99,7 +120,7 @@
             <section id="addField" class="mb-8">
                 <h1 class="text-3xl font-bold mb-4">Tambah Lapangan</h1>
                 <div class="bg-white shadow rounded p-6">
-                    <form action="/addField" method="POST">
+                    <form action="/addField" method="POST" enctype="multipart/form-data">
                         <div class="mb-4">
                             <label for="fieldName" class="block text-gray-700 font-semibold mb-2">Nama Lapangan</label>
                             <input type="text" id="fieldName" name="fieldName" class="w-full border border-gray-300 rounded px-3 py-2" required>
@@ -107,6 +128,10 @@
                         <div class="mb-4">
                             <label for="fieldType" class="block text-gray-700 font-semibold mb-2">Jenis Lapangan</label>
                             <input type="text" id="fieldType" name="fieldType" placeholder="Misal: Sepak Bola, Basket" class="w-full border border-gray-300 rounded px-3 py-2" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="fieldImage" class="block text-gray-700 font-semibold mb-2">Foto Lapangan</label>
+                            <input type="file" id="fieldImage" name="fieldImage" accept="image/*" class="w-full border border-gray-300 rounded px-3 py-2" required>
                         </div>
                         <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Tambah Lapangan</button>
                     </form>
@@ -128,39 +153,28 @@
                             <th class="border border-gray-300 px-4 py-2">Lapangan</th>
                             <th class="border border-gray-300 px-4 py-2">Waktu</th>
                             <th class="border border-gray-300 px-4 py-2">Status</th>
+                            <th class="border border-gray-300 px-4 py-2">Aksi</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="scheduleTableBody">
                         <tr>
                             <td class="border border-gray-300 px-4 py-2">Lapangan 1</td>
                             <td class="border border-gray-300 px-4 py-2">10:00 - 12:00</td>
                             <td class="border border-gray-300 px-4 py-2">Tersedia</td>
+                            <td class="border border-gray-300 px-4 py-2 text-center">
+                                <button onclick="deleteSchedule(this)" class="bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600">Hapus</button>
+                            </td>
                         </tr>
                         <tr>
                             <td class="border border-gray-300 px-4 py-2">Lapangan 2</td>
                             <td class="border border-gray-300 px-4 py-2">13:00 - 15:00</td>
                             <td class="border border-gray-300 px-4 py-2">Disewa</td>
+                            <td class="border border-gray-300 px-4 py-2 text-center">
+                                <button onclick="deleteSchedule(this)" class="bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600">Hapus</button>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
-            </section>
-
-            <!-- Clear Schedule Section -->
-            <section id="clear" class="mb-8">
-                <h1 class="text-3xl font-bold mb-4">Kosongkan Jadwal</h1>
-                <div class="bg-white shadow rounded p-6">
-                    <form action="/clearSchedule" method="POST">
-                        <div class="mb-4">
-                            <label for="field" class="block text-gray-700 font-semibold mb-2">Pilih Lapangan</label>
-                            <select id="field" name="field" class="w-full border border-gray-300 rounded px-3 py-2">
-                                <option value="1">Lapangan 1</option>
-                                <option value="2">Lapangan 2</option>
-                                <option value="3">Lapangan 3</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Kosongkan</button>
-                    </form>
-                </div>
             </section>
         </main>
     </div>
