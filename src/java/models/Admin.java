@@ -12,7 +12,7 @@ public class Admin extends Account {
     private String adminID;
 
     public Admin(String username, String password, String adminID) {
-        super(username, password);
+        super(username, password, "admin");
         this.adminID = adminID;
     }
 
