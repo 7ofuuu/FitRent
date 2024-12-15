@@ -63,8 +63,8 @@
                             class=" w-[550px] h-full hidden rounded-r-2xl md:block object-cover"
                             />
                     </div>
- 
- 
+
+
 
                     <a
                         href="userHome.jsp"
