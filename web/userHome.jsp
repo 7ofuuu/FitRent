@@ -20,7 +20,8 @@
             <div class="flex items-center space-x-2">
                 <!--<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_B%C3%A9lo.svg/1024px-Airbnb_Logo_B%C3%A9lo.svg.png" alt="Logo" class="h-6">-->
                 <!--<span class="text-lg font-semibold">Fitrent</span>-->
-                <img class="w-24" src="<%=request.getContextPath()%>/assets/logo.svg" alt="alt"/>
+                <a href="index.jsp"> <img class="w-24" src="<%=request.getContextPath()%>/assets/logo.svg" alt="alt"/></a>
+               
             </div>
 
             <!-- Search bar -->

@@ -43,16 +43,17 @@
                             class="w-full p-2 border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-500"  placeholder="••••••••" required=""
                             />
                     </div>
-                   
-                    <button
-                        class="w-full bg-black text-white p-2 rounded-lg mb-6 hover:bg-white hover:text-black hover:border hover:border-gray-300"
+
+                    <a
+                        href="userHome.jsp"
+                        class="w-full bg-sky-600 text-white p-2 rounded-lg mb-6 hover:bg-white hover:text-black hover:border hover:border-gray-300 text-center inline-block"
                         >
                         Sign in
-                    </button>
-                    
+                    </a>
+
                     <div class="text-center text-gray-400">
                         Dont'have an account?
-                        <a href="registerPage.jsp" class="font-bold text-black">Sign up for free</a>
+                        <a href="registerPage.jsp" class="font-bold text-black hover:text-blue-800">Sign up for free</a>
                     </div>
                 </div>
                 <!-- {/* right side */} -->
