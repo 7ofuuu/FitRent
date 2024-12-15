@@ -58,7 +58,7 @@ public class LoginServlet extends HttpServlet {
         String pass = request.getParameter("pass");
             
         if ("admin@fitrent.com".equals(email) && "admin123".equals(pass)) {
-            response.sendRedirect("adminPage.jsp");
+            response.sendRedirect("admin.jsp");
         } else if ("finance@fitrent.com".equals(email) && "finance123".equals(pass)) {
             response.sendRedirect("financePage.jsp");
         } else {
