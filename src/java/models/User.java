@@ -14,7 +14,7 @@ public class User extends Account {
     //priavate Sewa[] daftarSewa;
 
     public User(String userID, String username, String password) {
-        super(username, password);
+        super(username, password, "user");
         this.userID = userID;
         this.balance = 0;
     }

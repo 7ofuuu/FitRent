@@ -13,7 +13,7 @@ public class Finance extends Account{
     private int balance;
 
     public Finance(String username, String password, String FinanceID) {
-        super(username, password);
+        super(username, password, "finance");
         this.FinanceID = FinanceID;
         this.balance = 0;
     }

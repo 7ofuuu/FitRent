@@ -11,10 +11,12 @@ package models;
 public abstract class Account {
     private String username;
     private String password;
+    private String accType;
 
-    public Account(String username, String password) {
+    public Account(String username, String password, String accType) {
         this.username = username;
         this.password = password;
+        this.accType = accType;
     }
 
     public String getUsername() {
