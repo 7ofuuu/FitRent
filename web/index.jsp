@@ -14,34 +14,19 @@
         <title>Fitrent</title>
     </head>
     <body class="pb-8">
-        <nav>
-            <div class="px-6 container mx-auto flex items-center justify-between py-5">
-                <!--<a href="" class="w-32"><img src="img/logo.png" /></a>-->
-                <p class="text-3xl font-bold">Fitrent</p>
-                <div class="hidden md:inline space-x-6 font-semibold">
-                    <!--<a class="hover:text-sky-600" href="">Pricing</a>-->
-                    <a class="hover:text-sky-600" href="">Services</a>
-                    <a class="hover:text-sky-600" href="">About Us</a>
-                    <!--<a class="hover:text-sky-600" href="">Career</a>-->
-                    <a class="hover:text-sky-600" href="">Community</a>
-                </div>
-                <div class="space-x-2">
-                    <a href="loginPage.jsp" class="hidden md:inline bg-sky-600 text-white px-4 py-2 rounded-3xl">Sign in</a>
-                    <a href="registerPage.jsp" class="hidden md:inline bg-sky-600 text-white px-4 py-2 rounded-3xl">Sign up</a>
-                </div>
-                <img src="img/icon-hamburger.svg" class="hamburger md:hidden" />
+        <nav class=" flex items-center justify-between px-36 py-4 border-b">
+            <!-- Logo -->
+            <div class="flex items-center space-x-2">
+                <!--<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_B%C3%A9lo.svg/1024px-Airbnb_Logo_B%C3%A9lo.svg.png" alt="Logo" class="h-6">-->
+                <!--<span class="text-lg font-semibold">Fitrent</span>-->
+                <img class="w-24" src="<%=request.getContextPath()%>/assets/logo.svg" alt="alt"/>
             </div>
-            <!-- mobile menu -->
-            <div class="md:hidden">
-                <div class="menu absolute top-16 container hidden flex-col bg-white shadow-md inset-x-0 mx-auto px-6 py-5">
-                    <a class="hover:text-sky-600" href="">Pricing</a>
-                    <a class="hover:text-sky-600" href="">Product</a>
-                    <a class="hover:text-sky-600" href="">About Us</a>
-                    <a class="hover:text-sky-600" href="">Career</a>
-                    <a class="hover:text-sky-600" href="">Community</a>
-                    <a class="hover:text-sky-600" href="registerPage.jsp">Create Account</a>
-                </div>
+
+            <div class="space-x-4">
+                <a href="loginPage.jsp" class="hidden md:inline bg-sky-600 text-white px-4 py-2 rounded-full">Sign in</a>
+                <a href="registerPage.jsp" class="hidden md:inline bg-sky-600 text-white px-4 py-2 rounded-full">Sign up</a>
             </div>
+
         </nav>
 
         <!-- hero section-->
@@ -50,7 +35,8 @@
                 <h4 class="text-xl font-bold">New Feature</h4>
                 <h3 class="text-5xl font-bold mb-5">Coming Up With Fresh Ideas</h3>
                 <p class="text-gray-500 mb-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam facere ea totam labore vitae autem.</p>
-                <a href="registerPage.jsp" class="bg-sky-600 text-white px-4 py-2 rounded-3xl">Create Account</a>
+                <!--<a href="registerPage.jsp" class="bg-sky-600 text-white px-4 py-2 rounded-3xl">Create Account</a>-->
+                <a href="registerPage.jsp"  class="bg-sky-600 text-white px-4 py-2 rounded-3xl">Create Account</a>
             </div>
             <img class="md:w-2/5" src="<%=request.getContextPath()%>/assets/hero1.jpg" />
         </section>
@@ -85,35 +71,64 @@
         </section>
         <!-- testimonies -->
         <section class="container mx-auto p-10 my-5 text-center">
-            <h4 class="text-xl font-bold">Testimonies</h4>
-            <h3 class="text-3xl font-bold mb-5">What They Say About Us</h3>
-            <div class="md:flex md:justify-between mt-16 space-x-8">
-                <!-- person 1-->
-                <div class="bg-gray-100 md:w-1/3 rounded-md border border-gray-200">
-                    <img class="w-96  mx-auto -mt-8" src="<%=request.getContextPath()%>/assets/person1.jpg" />
-                    <h5 class="font-bold pt-5">John Saleh</h5>
-                    <p class="p-5 text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, odio.</p>
+            <h4 class="text-xl font-bold">Our Developer</h4>
+            <h3 class="text-3xl font-bold mb-5">The best of the best</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+                <!-- person 1 -->
+                <div class="bg-gray-100 rounded-md border border-gray-200">
+                    <img class="w-96 mx-auto -mt-8" src="<%=request.getContextPath()%>/assets/person1.jpg" alt="Person 1" />
+                    <h5 class="font-bold pt-5 text-center">Muhammad Razky Abdie Pratama</h5>
+                    <p class="p-5 text-gray-500 text-center">103022300047</p>
                 </div>
-                <!-- person 2-->
-                <div class="hidden md:inline bg-gray-100 w-1/3 rounded-md border border-gray-200">
-                    <img class="w-96 mx-auto -mt-8" src="<%=request.getContextPath()%>/assets/person2.jpg" />
-                    <h5 class="font-bold pt-5">Bob Smith</h5>
-                    <p class="p-5 text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, odio.</p>
+                <!-- person 2 -->
+                <div class="bg-gray-100 rounded-md border border-gray-200">
+                    <img class="w-96 mx-auto -mt-8" src="<%=request.getContextPath()%>/assets/person2.jpg" alt="Person 2" />
+                    <h5 class="font-bold pt-5 text-center">Maulana Jidan Azizi</h5>
+                    <p class="p-5 text-gray-500 text-center">103022300083</p>
                 </div>
-                <!-- person 3-->
-                <div class="hidden md:inline bg-gray-100 w-1/3 rounded-md border border-gray-200">
-                    <img class="w-96 mx-auto -mt-8" src="<%=request.getContextPath()%>/assets/person3.jpg" />
-                    <h5 class="font-bold pt-5">Alex White</h5>
-                    <p class="p-5 text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, odio.</p>
+                <!-- person 3 -->
+                <div class="bg-gray-100 rounded-md border border-gray-200">
+                    <img class="w-96 mx-auto -mt-8" src="<%=request.getContextPath()%>/assets/person3.jpg" alt="Person 3" />
+                    <h5 class="font-bold pt-5 text-center">Damai Putra Yudha</h5>
+                    <p class="p-5 text-gray-500 text-center">103022300029</p>
                 </div>
             </div>
-            <button class="bg-sky-600 text-white px-4 py-2 rounded-3xl mt-6">See All Testimonies</button>
+            <div id="additional-people" class="hidden grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+                <!-- person 4 -->
+                <div class="bg-gray-100 rounded-md border border-gray-200">
+                    <img class="w-96 mx-auto " src="<%=request.getContextPath()%>/assets/person4.jpg" alt="Person 4" />
+                    <h5 class="font-bold pt-5 text-center">Tubagus Aulia Aariz </h5>
+                    <p class="p-5 text-gray-500 text-center">103022300141</p>
+                </div>
+                <!-- person 5 -->
+                <div class="bg-gray-100 rounded-md border border-gray-200">
+                    <img class="w-96 mx-auto " src="<%=request.getContextPath()%>/assets/person5.jpg" alt="Mohammad Ilham Firdaus" />
+                    <h5 class="font-bold pt-5 text-center">Mohammad Ilham Firdaus</h5>
+                    <p class="p-5 text-gray-500 text-center">10302230043</p>
+                </div>
+            </div>
+
+
+            <button id="show-more" class="bg-sky-600 text-white px-4 py-2 rounded-3xl mt-6">Show all member</button>
         </section>
         <footer class="flex md:flex-row flex-col items-center mt-24 gap-3 justify-center font-medium">
-            <p class="text-slate-800">
-                Built with 💖 by Fitrent Dev
-            </p>
+            <p class="text-slate-800">Fitrent Developer</p>
         </footer>
+
+        <script>
+            // Handle button click
+            document.getElementById('show-more').addEventListener('click', function () {
+                const additionalPeople = document.getElementById('additional-people');
+                if (additionalPeople.classList.contains('hidden')) {
+                    additionalPeople.classList.remove('hidden');
+                    this.textContent = 'Hide member';
+                } else {
+                    additionalPeople.classList.add('hidden');
+                    this.textContent = 'Show all member';
+                }
+            });
+        </script>
+
 
 
 

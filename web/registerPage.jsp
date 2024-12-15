@@ -20,9 +20,9 @@
                 >
                 <!-- left side -->
                 <div class=" flex flex-col justify-center p-8 md:p-14">
-                    <span class="mb-3 text-4xl font-bold">Sign Up</span>
+                    <span class="mb-3 text-4xl font-bold">Sign Up to <a href="index.jsp">Fitrent</a></span>
                     <span class="font-light text-gray-400 mb-8">
-                        create you account
+                        create your account
                     </span>
                     <div class="py-4">
                         <span class="mb-2 text-md">Name</span>
