@@ -118,19 +118,39 @@
 
             <!-- Add Field Section -->
             <section id="addField" class="mb-8">
-                <h1 class="text-3xl font-bold mb-4">Tambah Lapangan</h1>
+                <h1 class="text-3xl font-bold mb-4">Tambah Fasilitas</h1>
                 <div class="bg-white shadow rounded p-6">
                     <form action="/addField" method="POST" enctype="multipart/form-data">
                         <div class="mb-4">
-                            <label for="fieldName" class="block text-gray-700 font-semibold mb-2">Nama Lapangan</label>
+                            <label for="fieldName" class="block text-gray-700 font-semibold mb-2">Nama Fasilitias</label>
                             <input type="text" id="fieldName" name="fieldName" class="w-full border border-gray-300 rounded px-3 py-2" required>
                         </div>
                         <div class="mb-4">
-                            <label for="fieldType" class="block text-gray-700 font-semibold mb-2">Jenis Lapangan</label>
-                            <input type="text" id="fieldType" name="fieldType" placeholder="Misal: Sepak Bola, Basket" class="w-full border border-gray-300 rounded px-3 py-2" required>
+                            <label for="fieldType" class="block text-gray-700 font-semibold mb-2">Jenis Fasilitas</label>
+                            <select id="text" name="fieldType" class="w-full border border-gray-300 rounded px-3 py-2">
+                                <option value="1">Lapangan Futsal</option>
+                                <option value="2">Lapangan Basket</option>
+                                <option value="3">Lapangan Bulu Tangkis</option>
+                                <option value="4">Kolam Voli</option>
+                                <option value="5">Lapangan Lari</option>
+                                <option value="6">Kolam Renang</option>
+                            </select>
                         </div>
                         <div class="mb-4">
-                            <label for="fieldImage" class="block text-gray-700 font-semibold mb-2">Foto Lapangan</label>
+                            <label for="fieldAddres" class="block text-gray-700 font-semibold mb-2">Alamat Fasilitas</label>
+                            <input type="text" id="fieldType" name="fieldAddres" placeholder="Misal: Jalan Arteri Raya 17, RT 06 RW 07, Kelurahan Macanan, Kecamatan Wonokromo, Kota Surabaya, Jawa Timur, 60241." class="w-full border border-gray-300 rounded px-3 py-2" required>
+                        </div>
+   
+                            <div class="mb-4">
+                                <label for="fieldDescription" class="block text-gray-700 font-semibold mb-2">Deskripsi Fasilitas</label>
+                            <textarea id="description" rows="4" class="w-full border border-gray-300 rounded px-3 py-2" placeholder="Tulis deskripsi di sini..."></textarea>
+                        </div>
+                        <div class="mb-4">
+                            <label for="fieldPrice" class="block text-gray-700 font-semibold mb-2">Harga Fasilitas Perjam</label>
+                            <input type="text" id="fieldPrice" name="fieldAddres" placeholder="Misal: Rp.100.000,00" class="w-full border border-gray-300 rounded px-3 py-2" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="fieldImage" class="block text-gray-700 font-semibold mb-2">Foto Fasilitas</label>
                             <input type="file" id="fieldImage" name="fieldImage" accept="image/*" class="w-full border border-gray-300 rounded px-3 py-2" required>
                         </div>
                         <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Tambah Lapangan</button>
@@ -140,7 +160,7 @@
 
             <!-- Schedule Section -->
             <section id="schedule" class="mb-8">
-                <h1 class="text-3xl font-bold mb-4">Lihat Jadwal Lapangan</h1>
+                <h1 class="text-3xl font-bold mb-4">Lihat Jadwal Fasilitas</h1>
                 <div class="mb-4">
                     <label for="FacilitySelect" class="block text-gray-700 font-semibold mb-2">Pilih Fasilitas</label>
                      <select id="FacilitySelect" class="w-full border border-gray-300 rounded px-3 py-2">

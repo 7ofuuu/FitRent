@@ -32,9 +32,9 @@
         <!-- hero section-->
         <section class="px-6 container mx-auto md:flex md:justify-between items-center my-6 space-x-6">
             <div class="md:w-3/6 text-center md:text-left">
-                <h4 class="text-xl font-bold">New Feature</h4>
-                <h3 class="text-5xl font-bold mb-5">Coming Up With Fresh Ideas</h3>
-                <p class="text-gray-500 mb-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam facere ea totam labore vitae autem.</p>
+                <!--<h4 class="text-xl font-bold">New Feature</h4>-->
+                <h3 class="text-5xl font-bold mb-5">Solusi Mudah untuk Menyewa Fasilitas Olahraga</h3>
+                <p class="text-gray-500 mb-5">Nikmati Akses Mudah ke Fasilitas Olahraga Milik Pemerintah, Kapan Saja dan di Mana Saja</p>
                 <!--<a href="registerPage.jsp" class="bg-sky-600 text-white px-4 py-2 rounded-3xl">Create Account</a>-->
                 <a href="registerPage.jsp"  class="bg-sky-600 text-white px-4 py-2 rounded-3xl">Create Account</a>
             </div>
@@ -45,19 +45,19 @@
         <section class="container mx-auto space-x-6 md:flex md:justify-between items-center">
             <img src="<%=request.getContextPath()%>/assets/hero2.jpg" class="w-72 md:w-3/5 /mx-auto" alt="" />
             <div class="md:w-3/6 text-center md:text-left">
-                <h4 class="text-xl font-bold">Statistic</h4>
-                <h3 class="text-3xl font-bold mb-5">What We Can Do For You</h3>
-                <p class="text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel alias cupiditate, dolores sunt similique expedita atque consequuntur obcaecati aspernatur est?</p>
+                <!--<h4 class="text-xl font-bold">Statistic</h4>-->
+                <h3 class="text-3xl font-bold mb-5">Apa yang FitRent Tawarkan untuk Anda?</h3>
+                <p class="text-gray-500">Nikmati kemudahan akses ke berbagai fasilitas olahraga milik pemerintah dengan cepat, praktis, dan transparan. FitRent hadir untuk mendukung gaya hidup aktif dan sehat Anda!</p>
                 <div class="flex justify-between py-6 max-w-80 mx-auto">
                     <!-- portfolio-->
                     <div class="text-center text-gray-500">
-                        <h4 class="text-2xl font-bold text-gray-900">20+</h4>
-                        <p>Portfolios</p>
+                        <h4 class="text-2xl font-bold text-gray-900">100+</h4>
+                        <p>Fasilitas Tersedia</p>
                     </div>
                     <!-- Clients -->
                     <div class="text-center text-gray-500">
-                        <h4 class="text-2xl font-bold text-gray-900">100+</h4>
-                        <p>Clients</p>
+                        <h4 class="text-2xl font-bold text-gray-900">10.000+</h4>
+                        <p>Pengguna</p>
                     </div>
                     <!-- portfolio-->
                     <div class="text-center text-gray-500">
@@ -66,7 +66,7 @@
                     </div>
                 </div>
                 <!--<p class="text-gray-500 mb-4"><span class="font-bold">info</span> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem, voluptatibus?</p>-->
-                <button class="bg-sky-600 text-white px-4 py-2 rounded-3xl">Detail</button>
+                <!--<button class="bg-sky-600 text-white px-4 py-2 rounded-3xl">Detail</button>-->
             </div>
         </section>
         <!-- testimonies -->
