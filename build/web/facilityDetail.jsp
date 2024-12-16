@@ -17,7 +17,7 @@
 
     <body>
         <!-- Header -->
-        <nav class=" flex items-center justify-between px-14 py-4 border-b">
+        <nav class=" flex items-center justify-between px-20 py-4 border-b">
             <!-- Logo -->
             <div class="flex items-center space-x-2">
                 <!--<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_B%C3%A9lo.svg/1024px-Airbnb_Logo_B%C3%A9lo.svg.png" alt="Logo" class="h-6">-->
@@ -74,67 +74,82 @@
         </nav>
 
         <!-- Main Content -->
-        <main class="container mx-auto p-4">
-            <!-- Title and Images -->
-            <section class="bg-white shadow rounded-lg p-6">
-                <h2 class="text-2xl font-bold mb-4">Vila tepi pantai seluas 7.000 meter persegi, mansion papan atas, layanan terbaik 12BR</h2>
+        <main class="px-20 mb-20">
+
+            <!-- Listing Title and Images -->
+            <section class="bg-white p-6 rounded-lg">
+                <h1 class="text-2xl font-bold mb-4">Gor C-Tra Arena</h1>
                 <div class="grid grid-cols-2 gap-4 mb-6">
-                    <img src="https://via.placeholder.com/600x400" alt="Villa image" class="rounded-lg">
-                    <div class="grid grid-cols-2 gap-4">
-                        <img src="https://via.placeholder.com/300x200" alt="Image 1" class="rounded-lg">
-                        <img src="https://via.placeholder.com/300x200" alt="Image 2" class="rounded-lg">
-                        <img src="https://via.placeholder.com/300x200" alt="Image 3" class="rounded-lg">
-                        <img src="https://via.placeholder.com/300x200" alt="Image 4" class="rounded-lg">
+                    <!-- Gambar Utama (50%) -->
+                    <div class="h-full">
+                        <img src="<%=request.getContextPath()%>/assets/c-tra-arena.jpg" alt="Gor C-tra" class="h-full w-full object-cover rounded-lg">
+                    </div>
+
+                    <!-- Gambar Lainnya (50%) -->
+                    <div class="grid grid-cols-2 gap-4 h-1/2">
+                        <img src="<%=request.getContextPath()%>/assets/ctra1.jpg" alt="Image 1" class="h-full w-full object-cover rounded-lg">
+                        <img src="<%=request.getContextPath()%>/assets/ctra2.jpg" alt="Image 1" class="h-full w-full object-cover rounded-lg">
+                        <img src="<%=request.getContextPath()%>/assets/ctra3.jpg" alt="Image 1" class="h-full w-full object-cover rounded-lg">
+                        <img src="<%=request.getContextPath()%>/assets/ctra4.jpg" alt="Image 1" class="h-full w-full object-cover rounded-lg">
                     </div>
                 </div>
 
-                <!-- Details -->
-                <div class="grid grid-cols-3 gap-4">
+            </section>
+
+            <!-- Details Section -->
+            <section class="bg-white p-6 rounded-lg shadow mb-8">
+                <h2 class="text-xl font-bold mb-4">Seluruh vila di Kecamatan Gerokgak, Indonesia</h2>
+                <p class="text-gray-700 mb-4">3 tamu · 3 kamar tidur · 3 tempat tidur · 3 kamar mandi</p>
+                <div class="grid grid-cols-2 gap-4">
                     <div>
-                        <h3 class="text-xl font-bold">Seluruh rumah di Pa Klok, Thailand</h3>
-                        <p class="text-gray-600">12 tamu · 12 kamar tidur · 15 kamar mandi</p>
-                    </div>
-                    <div>
-                        <h4 class="font-semibold">Fasilitas yang ditawarkan</h4>
-                        <ul class="list-disc list-inside">
-                            <li>Pemandangan teluk</li>
-                            <li>Akses ke pantai</li>
-                            <li>WiFi</li>
-                            <li>Bak mandi air panas</li>
+                        <h3 class="text-lg font-bold mb-2">Fasilitas yang ditawarkan</h3>
+                        <ul class="list-disc list-inside text-gray-700">
+                            <li>Wi-Fi</li>
+                            <li>Kolam renang</li>
+                            <li>Dapur</li>
+                            <li>AC</li>
                         </ul>
                     </div>
                     <div>
-                        <h4 class="font-semibold">Harga</h4>
-                        <p class="text-gray-800 text-lg font-bold">Rp94.364.509/malam</p>
-                        <button class="mt-4 bg-red-500 text-white py-2 px-4 rounded">Pesan</button>
+                        <h3 class="text-lg font-bold mb-2">Kebijakan</h3>
+                        <ul class="list-disc list-inside text-gray-700">
+                            <li>Check-in: 14:00</li>
+                            <li>Check-out: 11:00</li>
+                            <li>Peraturan rumah: Tidak boleh merokok, Tidak ada hewan peliharaan</li>
+                        </ul>
                     </div>
                 </div>
             </section>
 
-            <!-- Map and Reviews -->
-            <section class="mt-6 grid grid-cols-3 gap-4">
-                <!-- Map -->
-                <div class="col-span-2 bg-white shadow rounded-lg p-6">
-                    <h4 class="font-bold mb-2">Lokasi Anda</h4>
-                    <div class="w-full h-64 bg-gray-300 flex items-center justify-center rounded-lg">
-                        <span>Peta di sini</span>
-                    </div>
-                </div>
-
-                <!-- Host Info -->
-                <div class="bg-white shadow rounded-lg p-6">
-                    <h4 class="font-bold mb-2">Tuan Rumah Anda</h4>
+            <div class="flex space-x-4">
+                <!-- Booking Section -->
+                <section class="bg-white p-6 rounded-lg shadow w-1/2">
+                    <h2 class="text-xl font-bold mb-4">Pemesanan</h2>
+                    <p class="text-gray-700 mb-4">Harga per malam: Rp1.500.000</p>
                     <div class="flex items-center space-x-4">
-                        <div class="bg-gray-200 w-16 h-16 rounded-full"></div>
-                        <div>
-                            <p class="font-semibold">Wood</p>
-                            <p class="text-gray-600">297 ulasan (4.74)</p>
-                        </div>
+                        <input type="date" class="border border-gray-300 p-2 rounded-lg">
+                        <input type="date" class="border border-gray-300 p-2 rounded-lg">
+                        <button class="bg-red-500 text-white px-4 py-2 rounded-lg">Pesan</button>
                     </div>
-                    <button class="mt-4 bg-blue-500 text-white py-2 px-4 rounded">Kirimkan Pesan</button>
-                </div>
-            </section>
+                </section>
+
+                <!-- Reviews Section -->
+                <section class="bg-white p-6 rounded-lg shadow w-1/2">
+                    <h2 class="text-xl font-bold mb-4">Ulasan</h2>
+                    <p class="text-gray-700 mb-4">Rating: 4.84</p>
+                    <ul class="list-disc list-inside text-gray-700">
+                        <li>Great place, highly recommended!</li>
+                        <li>Loved the stay, will come back again.</li>
+                    </ul>
+                </section>
+            </div>
+
+
+
+
+
         </main>
+
         <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
 
     </body>

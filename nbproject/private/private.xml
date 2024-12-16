@@ -3,11 +3,20 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/damai/FitRent/web/index.jsp</file>
             <file>file:/C:/Users/damai/FitRent/src/java/controllers/LoginServlet.java</file>
             <file>file:/C:/Users/damai/FitRent/web/admin.jsp</file>
             <file>file:/C:/Users/damai/FitRent/web/testSuccess.jsp</file>
             <file>file:/C:/Users/damai/FitRent/web/loginPage.jsp</file>
+=======
+            <file>file:/C:/Coding/Project/FitRent/src/java/controllers/LoginServlet.java</file>
+            <file>file:/C:/Coding/Project/FitRent/web/userHome.jsp</file>
+            <file>file:/C:/Coding/Project/FitRent/web/loginPage.jsp</file>
+            <file>file:/C:/Coding/Project/FitRent/web/index.jsp</file>
+            <file>file:/C:/Coding/Project/FitRent/web/WEB-INF/web.xml</file>
+            <file>file:/C:/Coding/Project/FitRent/web/facilityDetail.jsp</file>
+>>>>>>> e973c3e1f1016bd62a05bfaa56b4eef103ce4e2c
         </group>
     </open-files>
 </project-private>
