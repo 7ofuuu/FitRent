@@ -3,40 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-
-            <file>file:/C:/Users/Lenovo/Code/Java/pbo%20kuliah/Non-Praktikum/Tubes/FitRent/web/WEB-INF/web.xml</file>
-            <file>file:/C:/Users/Lenovo/Code/Java/pbo%20kuliah/Non-Praktikum/Tubes/FitRent/web/index.jsp</file>
-            <file>file:/C:/Users/Lenovo/Code/Java/pbo%20kuliah/Non-Praktikum/Tubes/FitRent/src/java/models/User.java</file>
-            <file>file:/C:/Users/Lenovo/Code/Java/pbo%20kuliah/Non-Praktikum/Tubes/FitRent/src/java/models/Account.java</file>
-            <file>file:/C:/Users/Lenovo/Code/Java/pbo%20kuliah/Non-Praktikum/Tubes/FitRent/src/java/models/Admin.java</file>
-            <file>file:/C:/Users/Lenovo/Code/Java/pbo%20kuliah/Non-Praktikum/Tubes/FitRent/web/registerPage.jsp</file>
-            <file>file:/C:/Users/Lenovo/Code/Java/pbo%20kuliah/Non-Praktikum/Tubes/FitRent/src/java/controllers/UserServlet.java</file>
-            <file>file:/C:/Users/Lenovo/Code/Java/pbo%20kuliah/Non-Praktikum/Tubes/FitRent/src/java/models/Finance.java</file>
-            <file>file:/C:/Users/Lenovo/Code/Java/pbo%20kuliah/Non-Praktikum/Tubes/FitRent/web/loginPage.jsp</file>
+            <file>file:/C:/Users/Lenovo/Code/Java/pbo%20kuliah/Non-Praktikum/Tubes%202/FitRent/web/facilityDetail.jsp</file>
+            <file>file:/C:/Users/Lenovo/Code/Java/pbo%20kuliah/Non-Praktikum/Tubes%202/FitRent/web/loginPage.jsp</file>
+            <file>file:/C:/Users/Lenovo/Code/Java/pbo%20kuliah/Non-Praktikum/Tubes%202/FitRent/web/registerPage.jsp</file>
+            <file>file:/C:/Users/Lenovo/Code/Java/pbo%20kuliah/Non-Praktikum/Tubes%202/FitRent/src/java/controllers/LoginServlet.java</file>
+            <file>file:/C:/Users/Lenovo/Code/Java/pbo%20kuliah/Non-Praktikum/Tubes%202/FitRent/src/java/controllers/RegisterServlet.java</file>
+            <file>file:/C:/Users/Lenovo/Code/Java/pbo%20kuliah/Non-Praktikum/Tubes%202/FitRent/web/userHome.jsp</file>
         </group>
-
-
-            <file>file:/C:/Users/damai/FitRent/web/index.jsp</file>
-            <file>file:/C:/Users/damai/FitRent/web/admin.jsp</file>
-            <file>file:/C:/Users/damai/FitRent/nbproject/build-impl.xml</file>
-            <file>file:/C:/Users/damai/FitRent/web/WEB-INF/web.xml</file>
-            <file>file:/C:/Users/damai/FitRent/web/loginPage.jsp</file>
-        </group>
-
-            <file>file:/C:/Users/ilham/OneDrive/Documents/NetBeansProjects/FitrentApp/web/registerPage.jsp</file>
-            <file>file:/C:/Users/ilham/OneDrive/Documents/NetBeansProjects/FitrentApp/web/userHome.jsp</file>
-            <file>file:/C:/Users/ilham/OneDrive/Documents/NetBeansProjects/FitrentApp/web/loginModal.jsp</file>
-            <file>file:/C:/Users/ilham/OneDrive/Documents/NetBeansProjects/FitrentApp/web/facilityDetail.jsp</file>
-            <file>file:/C:/Users/ilham/OneDrive/Documents/NetBeansProjects/FitrentApp/web/loginPage.jsp</file>
-            <file>file:/C:/Users/ilham/OneDrive/Documents/NetBeansProjects/FitrentApp/web/META-INF/context.xml</file>
-            <file>file:/C:/Users/ilham/OneDrive/Documents/NetBeansProjects/FitrentApp/src/java/models/User.java</file>
-            <file>file:/C:/Users/ilham/OneDrive/Documents/NetBeansProjects/FitrentApp/web/style/style.css</file>
-            <file>file:/C:/Users/ilham/OneDrive/Documents/NetBeansProjects/FitrentApp/web/index.jsp</file>
-            <file>file:/C:/Users/ilham/OneDrive/Documents/NetBeansProjects/FitrentApp/web/js/script.js</file>
-            <file>file:/C:/Users/ilham/OneDrive/Documents/NetBeansProjects/FitrentApp/web/WEB-INF/web.xml</file>
-        </group>
-
-
-
     </open-files>
 </project-private>

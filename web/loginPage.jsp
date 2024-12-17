@@ -66,7 +66,7 @@
 
 
 
-                    <a
+<!--                    <a
                         href="userHome.jsp"
                         class="w-full bg-sky-600 text-white p-2 rounded-lg mb-6 hover:bg-white hover:text-black hover:border hover:border-gray-300 text-center inline-block"
                         >
@@ -78,13 +78,13 @@
                         <a href="registerPage.jsp" class="font-bold text-black hover:text-blue-800">Sign up for free</a>
                     </div>
                 </div>
-                <!-- {/* right side */} -->
+                 {/* right side */} 
                 <div class="  relative">
                     <img
                         src="<%=request.getContextPath()%>/assets/login.jpg"
                         alt="img"
                         class=" w-[550px] h-full hidden rounded-r-2xl md:block object-cover"
-                        />
+                        />-->
 
                 </div>
             </div>
