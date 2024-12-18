@@ -74,7 +74,7 @@ public class LoginServlet extends HttpServlet {
                 ResultSet rs=ps.executeQuery();
                     
                 if (rs.next()) {
-                    response.sendRedirect("testSuccess.jsp");
+                    response.sendRedirect("userHome.jsp");
                 } else {
                     response.sendRedirect("testFailed.jsp");
                 }
