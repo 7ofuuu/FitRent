@@ -1,4 +1,4 @@
-package com.mycompany.fitrent;
+package models;
 
 public class Renang extends Facility {
 

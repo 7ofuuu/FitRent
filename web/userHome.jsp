@@ -21,33 +21,15 @@
                 <!--<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_B%C3%A9lo.svg/1024px-Airbnb_Logo_B%C3%A9lo.svg.png" alt="Logo" class="h-6">-->
                 <!--<span class="text-lg font-semibold">Fitrent</span>-->
                 <a href="index.jsp"> <img class="w-24" src="<%=request.getContextPath()%>/assets/logo.svg" alt="alt"/></a>
-
             </div>
 
             <!-- Search bar -->
-            <div class="px-1 flex items-center bg-white border rounded-full shadow-sm">
-                <!--<div class="px-4 py-2 text-gray-600">Ke mana saja</div>-->
-
-                <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class=" text-gray-600 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center" type="button">Dropdown button <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-                    </svg>
-                </button>
-
-                <!-- Dropdown menu -->
-                <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 ">
-                    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
-                        <li>
-                            <a href="#" class="text-black block px-4 py-2 hover:bg-gray-100 ">Basket</a>
-                            <a href="#" class="text-black block px-4 py-2 hover:bg-gray-100 ">Volly</a>
-                            <a href="#" class="text-black block px-4 py-2 hover:bg-gray-100 ">Badminton</a>
-                            <a href="#" class="text-black block px-4 py-2 hover:bg-gray-100 ">Futsal</a>
-                        </li>
-
-                    </ul>
-                </div>
-
-                <input class="px-4 py-2 text-gray-400  rounded-full focus:ring-2 focus:outline-none focus:ring-gray-400"  placeholder="cari fasilitas"></input>
-                <button class="flex items-center justify-center w-8 h-8 text-white bg-sky-600 rounded-full ml-2">
+            <div class="flex items-center bg-white border rounded-full shadow-sm w-2/5 ">
+                <input 
+                    class="flex-1 px-4 py-2 text-gray-800 rounded-full focus:ring-2 focus:outline-none focus:ring-transparent"  
+                    placeholder="cari fasilitas"
+                    />
+                <button class="flex items-center justify-center w-8 h-8 text-white bg-sky-600 rounded-full mr-2">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M11 19c-3.866 0-7-3.134-7-7s3.134-7 7-7 7 3.134 7 7-3.134 7-7 7z" />
                     <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35" />
@@ -55,19 +37,28 @@
                 </button>
             </div>
 
-            <!-- Profile and Menu -->
+
+            <!-- Logout -->
             <div class="flex items-center space-x-4">
                 <!--<span class="text-sm text-gray-600 cursor-pointer">Jadikan rumah Anda Airbnb</span>-->
-                <button class="flex items-center justify-center w-8 h-8 bg-gray-200 rounded-full">
+                <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown-logout" class="flex items-center justify-center w-8 h-8 bg-gray-200 rounded-full">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 text-gray-600">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 6h10.5M6.75 12h10.5m-10.5 6h10.5" />
                     </svg>
                 </button>
-                <div class="w-8 h-8 bg-gray-400 rounded-full"></div>
+                 <!-- Dropdown menu -->
+                <div id="dropdown-logout" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 ">
+                    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+                        <li>
+                            <a href="#" class="text-black block px-4 py-2 hover:bg-gray-100 ">Logout</a>
+                        </li>
+
+                    </ul>
+                </div>
             </div>
         </nav>
         <!-- Filter Bar -->
-        <div class="flex items-center justify-between  py-4 bg-white border-b">
+        <div class="flex items-center justify-between bg-white border-b">
             <div class="container ml-20  py-4">
                 <div class="flex space-x-4 overflow-x-auto no-scrollbar">
                     <button class="flex-none text-sm font-medium border-b-2 border-black px-4 py-2">ALL</button>
@@ -79,13 +70,24 @@
                 </div>
             </div>
             <div class="flex items-center space-x-4">
-                <button class="flex items-center mr-14 px-4 py-2 text-gray-500 border rounded-lg">
+                <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown-filter" class=" flex items-center mr-14 px-4 py-2 text-gray-500 border rounded-lg">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 mr-2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16m-7 5h7" />
                     </svg>
                     Filter
                 </button>
+                 <!-- Dropdown menu -->
+                <div id="dropdown-filter" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 ">
+                    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+                        <li>
+                            <a href="#" class="text-black block px-4 py-2 hover:bg-gray-100 ">Harga Terendah</a>
+                            <a href="#" class="text-black block px-4 py-2 hover:bg-gray-100 ">Volly</a>
+                            <a href="#" class="text-black block px-4 py-2 hover:bg-gray-100 ">Badminton</a>
+                            <a href="#" class="text-black block px-4 py-2 hover:bg-gray-100 ">Futsal</a>
+                        </li>
 
+                    </ul>
+                </div>
             </div>
         </div>
 
