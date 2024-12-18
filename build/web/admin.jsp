@@ -43,6 +43,11 @@
         }
 
         window.onload = loadDates;
+        function logout() {
+        if (confirm("Apakah Anda yakin ingin keluar?")) {
+            window.location.href = '/FitrentApp/';
+        }
+    }
     </script>
 </head>
 <body class="bg-gray-100">
@@ -59,9 +64,9 @@
             </h2>
             <nav class="space-y-2">
                 <a href="#dashboard" class="block py-2 px-4 rounded hover:bg-gray-700">Dashboard</a>
-                <a href="#addField" class="block py-2 px-4 rounded hover:bg-gray-700">Tambah Lapangan</a>
-                <a href="#schedule" class="block py-2 px-4 rounded hover:bg-gray-700">Lihat Jadwal Lapangan</a>
-                <a href="#clear" onclick="clearSchedule()" class="block py-2 px-4 rounded hover:bg-gray-700">Kosongkan Jadwal</a>
+                <a href="#addField" class="block py-2 px-4 rounded hover:bg-gray-700">Tambah Fasilitas</a>
+                <a href="#schedule" class="block py-2 px-4 rounded hover:bg-gray-700">Lihat Jadwal Fasilitas</a>
+                <button onclick="logout()" class="block w-full text-left py-2 px-4 rounded hover:bg-gray-700">Logout</button>
             </nav>
         </aside>
 
@@ -79,7 +84,7 @@
                     </div>
                 </div>
                 <div class="bg-white shadow rounded p-6">
-                    <h2 class="text-xl font-semibold mb-2">Analisis Lapangan</h2>
+                    <h2 class="text-xl font-semibold mb-2">Analisis Fasilitas, Hari ini: </h2>
                     <p class="text-gray-700">Jumlah Lapangan Terpakai: 5</p>
                     <p class="text-gray-700">Jumlah Lapangan Kosong: 3</p>
                 </div>
