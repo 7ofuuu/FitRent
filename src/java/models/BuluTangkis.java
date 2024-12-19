@@ -1,14 +1,32 @@
-package com.mycompany.fitrent;
+package models;
+
+/**
+ *
+ * @author Idan
+ */
+import java.util.HashMap;
+import java.util.Map;
 
 public class BuluTangkis extends Facility {
 
     private int fieldNumber;
     private boolean isIndoor;
 
+    // HashMap untuk menyimpan data lapangan bulu tangkis berdasarkan facilityID
+    private static Map<String, BuluTangkis> buluTangkisMap = new HashMap<>();
+
     public BuluTangkis(int fieldNumber, boolean isIndoor, String facilityID, String namaFasilitas, String lokasi, int harga, boolean isAvailable) {
         super(facilityID, namaFasilitas, lokasi, harga, isAvailable);
         this.fieldNumber = fieldNumber;
         this.isIndoor = isIndoor;
+        
+        // Menambahkan objek BuluTangkis ke dalam HashMap dengan facilityID sebagai key
+        buluTangkisMap.put(facilityID, this);
+    }
+
+    public static BuluTangkis getBuluTangkisByFacilityID(String facilityID) {
+        // Mengambil data BuluTangkis berdasarkan facilityID
+        return buluTangkisMap.get(facilityID);
     }
 
     public void setFieldNumber(int fieldNumber) {
@@ -55,3 +73,4 @@ public class BuluTangkis extends Facility {
         return super.isAvailable();
     }
 }
+

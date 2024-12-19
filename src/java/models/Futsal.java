@@ -1,4 +1,11 @@
-package com.mycompany.fitrent;
+package models;
+
+/**
+ *
+ * @author Idan
+ */
+import java.util.HashMap;
+import java.util.Map;
 
 public class Futsal extends Facility {
 
@@ -7,14 +14,25 @@ public class Futsal extends Facility {
     private int size;
     private int fieldNumber;
 
-    public Futsal(String flooType, boolean isIndoor, int size, int fieldNumber,
+    // HashMap untuk menyimpan data lapangan futsal berdasarkan facilityID
+    private static Map<String, Futsal> futsalMap = new HashMap<>();
+
+    public Futsal(String floorType, boolean isIndoor, int size, int fieldNumber,
             String facilityID, String namaFasilitas, String lokasi,
             int harga, boolean isAvailable) {
         super(facilityID, namaFasilitas, lokasi, harga, isAvailable);
-        this.floorType = flooType;
+        this.floorType = floorType;
         this.isIndoor = isIndoor;
         this.size = size;
         this.fieldNumber = fieldNumber;
+        
+        // Menambahkan objek Futsal ke dalam HashMap dengan facilityID sebagai key
+        futsalMap.put(facilityID, this);
+    }
+
+    public static Futsal getFutsalByFacilityID(String facilityID) {
+        // Mengambil data Futsal berdasarkan facilityID
+        return futsalMap.get(facilityID);
     }
 
     public void setFloorType(String floorType) {
@@ -83,3 +101,4 @@ public class Futsal extends Facility {
         return super.isAvailable();
     }
 }
+

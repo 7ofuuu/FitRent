@@ -1,4 +1,11 @@
-package com.mycompany.fitrent;
+package models;
+
+/**
+ *
+ * @author Idan
+ */
+import java.util.HashMap;
+import java.util.Map;
 
 public class Voli extends Facility {
 
@@ -7,6 +14,9 @@ public class Voli extends Facility {
     private int netHeight;
     private String floorType;
     private boolean isIndoor;
+
+    // HashMap untuk menyimpan data lapangan voli berdasarkan facilityID
+    private static Map<String, Voli> voliMap = new HashMap<>();
 
     public Voli(int lenght, int width, int netHeight, String floorType,
             boolean isIndoor, String facilityID, String namaFasilitas,
@@ -17,6 +27,14 @@ public class Voli extends Facility {
         this.netHeight = netHeight;
         this.floorType = floorType;
         this.isIndoor = isIndoor;
+        
+        // Menambahkan objek Voli ke dalam HashMap dengan facilityID sebagai key
+        voliMap.put(facilityID, this);
+    }
+
+    public static Voli getVoliByFacilityID(String facilityID) {
+        // Mengambil data Voli berdasarkan facilityID
+        return voliMap.get(facilityID);
     }
 
     public int getLenght() {
@@ -96,3 +114,4 @@ public class Voli extends Facility {
         return super.isAvailable();
     }
 }
+

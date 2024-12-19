@@ -1,4 +1,11 @@
-package com.mycompany.fitrent;
+package models;
+
+/**
+ *
+ * @author Idan
+ */
+import java.util.HashMap;
+import java.util.Map;
 
 public class Renang extends Facility {
 
@@ -9,6 +16,9 @@ public class Renang extends Facility {
     private String poolType;
     private boolean isIndoor;
 
+    // HashMap untuk menyimpan data kolam renang berdasarkan facilityID
+    private static Map<String, Renang> renangMap = new HashMap<>();
+
     public Renang(int lenght, int width, int depth, int numLanes, String poolType, boolean isIndoor, String facilityID, String namaFasilitas, String lokasi, int harga, boolean isAvailable) {
         super(facilityID, namaFasilitas, lokasi, harga, isAvailable);
         this.lenght = lenght;
@@ -17,6 +27,14 @@ public class Renang extends Facility {
         this.numLanes = numLanes;
         this.poolType = poolType;
         this.isIndoor = isIndoor;
+        
+        // Menambahkan objek Renang ke dalam HashMap dengan facilityID sebagai key
+        renangMap.put(facilityID, this);
+    }
+
+    public static Renang getRenangByFacilityID(String facilityID) {
+        // Mengambil data Renang berdasarkan facilityID
+        return renangMap.get(facilityID);
     }
 
     public int getLenght() {
@@ -107,3 +125,4 @@ public class Renang extends Facility {
         return super.isAvailable();
     }
 }
+

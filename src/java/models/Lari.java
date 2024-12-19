@@ -1,4 +1,11 @@
-package com.mycompany.fitrent;
+package models;
+
+/**
+ *
+ * @author Idan
+ */
+import java.util.HashMap;
+import java.util.Map;
 
 public class Lari extends Facility {
 
@@ -6,11 +13,22 @@ public class Lari extends Facility {
     private int trackLength;
     private String floorType;
 
+    // HashMap untuk menyimpan data lapangan lari berdasarkan facilityID
+    private static Map<String, Lari> lariMap = new HashMap<>();
+
     public Lari(int numLanes, int trackLength, String floorType, String facilityID, String namaFasilitas, String lokasi, int harga, boolean isAvailable) {
         super(facilityID, namaFasilitas, lokasi, harga, isAvailable);
         this.numLanes = numLanes;
         this.trackLength = trackLength;
         this.floorType = floorType;
+        
+        // Menambahkan objek Lari ke dalam HashMap dengan facilityID sebagai key
+        lariMap.put(facilityID, this);
+    }
+
+    public static Lari getLariByFacilityID(String facilityID) {
+        // Mengambil data Lari berdasarkan facilityID
+        return lariMap.get(facilityID);
     }
 
     public void setNumLanes(int numLanes) {
@@ -71,3 +89,4 @@ public class Lari extends Facility {
         return super.isAvailable();
     }
 }
+

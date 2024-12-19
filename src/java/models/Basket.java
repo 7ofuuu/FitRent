@@ -1,4 +1,11 @@
-package com.mycompany.fitrent;
+package models;
+
+/**
+ *
+ * @author Idan
+ */
+import java.util.HashMap;
+import java.util.Map;
 
 public class Basket extends Facility {
 
@@ -6,11 +13,22 @@ public class Basket extends Facility {
     private String floorType;
     private boolean isIndoor;
 
+    // HashMap untuk menyimpan data basket berdasarkan facilityID
+    private static Map<String, Basket> basketMap = new HashMap<>();
+
     public Basket(int bucketNumber, String floorType, boolean isIndoor, String facilityID, String namaFasilitas, String lokasi, int harga, boolean isAvailable) {
         super(facilityID, namaFasilitas, lokasi, harga, isAvailable);
         this.bucketNumber = bucketNumber;
         this.floorType = floorType;
         this.isIndoor = isIndoor;
+        
+        // Menambahkan objek Basket ke dalam HashMap dengan facilityID sebagai key
+        basketMap.put(facilityID, this);
+    }
+
+    // Method untuk mengambil objek Basket berdasarkan facilityID
+    public static Basket getBasketByFacilityID(String facilityID) {
+        return basketMap.get(facilityID);
     }
 
     public void setFloorType(String floorType) {
@@ -28,7 +46,7 @@ public class Basket extends Facility {
         this.isIndoor = isIndoor;
     }
 
-    public boolean getisIndoor() {
+    public boolean getIsIndoor() {
         return isIndoor;
     }
 
@@ -68,3 +86,4 @@ public class Basket extends Facility {
         return super.isAvailable();
     }
 }
+

@@ -1,5 +1,9 @@
-package com.mycompany.fitrent;
+package models;
 
+/**
+ *
+ * @author Idan
+ */
 public abstract class Facility {
 
     private String facilityID;
