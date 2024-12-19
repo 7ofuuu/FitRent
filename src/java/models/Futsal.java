@@ -1,4 +1,4 @@
-package com.mycompany.fitrent;
+package models;
 
 public class Futsal extends Facility {
 
@@ -7,11 +7,11 @@ public class Futsal extends Facility {
     private int size;
     private int fieldNumber;
 
-    public Futsal(String flooType, boolean isIndoor, int size, int fieldNumber,
+    public Futsal(String floorType, boolean isIndoor, int size, int fieldNumber,
             String facilityID, String namaFasilitas, String lokasi,
             int harga, boolean isAvailable) {
         super(facilityID, namaFasilitas, lokasi, harga, isAvailable);
-        this.floorType = flooType;
+        this.floorType = floorType;
         this.isIndoor = isIndoor;
         this.size = size;
         this.fieldNumber = fieldNumber;
