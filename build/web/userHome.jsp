@@ -46,7 +46,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 6h10.5M6.75 12h10.5m-10.5 6h10.5" />
                     </svg>
                 </button>
-                 <!-- Dropdown menu -->
+                <!-- Dropdown menu -->
                 <div id="dropdown-logout" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 ">
                     <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
                         <li>
@@ -61,13 +61,14 @@
         <div class="flex items-center justify-between bg-white border-b">
             <div class="container ml-20  py-4">
                 <div class="flex space-x-4 overflow-x-auto no-scrollbar">
-                    <button class="flex-none text-sm font-medium border-b-2 border-black px-4 py-2">ALL</button>
-                    <button class="flex-none text-sm text-gray-500 px-4 py-2">Basket</button>
-                    <button class="flex-none text-sm text-gray-500 px-4 py-2">Bulu Tangkis</button>
-                    <button class="flex-none text-sm text-gray-500 px-4 py-2">Futsal</button>
-                    <button class="flex-none text-sm text-gray-500 px-4 py-2">Track Lari</button>
-                    <button class="flex-none text-sm text-gray-500 px-4 py-2">Volly</button>
+                    <button onclick="selectMenu(this)" class="menu-item flex-none text-sm font-medium border-b-2 border-black px-4 py-2">ALL</button>
+                    <button onclick="selectMenu(this)" class="menu-item flex-none text-sm text-gray-500 px-4 py-2">Basket</button>
+                    <button onclick="selectMenu(this)" class="menu-item flex-none text-sm text-gray-500 px-4 py-2">Bulu Tangkis</button>
+                    <button onclick="selectMenu(this)" class="menu-item flex-none text-sm text-gray-500 px-4 py-2">Futsal</button>
+                    <button onclick="selectMenu(this)" class="menu-item flex-none text-sm text-gray-500 px-4 py-2">Track Lari</button>
+                    <button onclick="selectMenu(this)" class="menu-item flex-none text-sm text-gray-500 px-4 py-2">Volly</button>
                 </div>
+
             </div>
             <div class="flex items-center space-x-4">
                 <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown-filter" class=" flex items-center mr-14 px-4 py-2 text-gray-500 border rounded-lg">
@@ -76,14 +77,14 @@
                     </svg>
                     Filter
                 </button>
-                 <!-- Dropdown menu -->
+                <!-- Dropdown menu -->
                 <div id="dropdown-filter" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 ">
                     <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
                         <li>
                             <a href="#" class="text-black block px-4 py-2 hover:bg-gray-100 ">Harga Terendah</a>
-                            <a href="#" class="text-black block px-4 py-2 hover:bg-gray-100 ">Volly</a>
-                            <a href="#" class="text-black block px-4 py-2 hover:bg-gray-100 ">Badminton</a>
-                            <a href="#" class="text-black block px-4 py-2 hover:bg-gray-100 ">Futsal</a>
+                            <a href="#" class="text-black block px-4 py-2 hover:bg-gray-100 ">Terdekat</a>
+                            <a href="#" class="text-black block px-4 py-2 hover:bg-gray-100 ">Rating Terbaik</a>
+                            <!--<a href="#" class="text-black block px-4 py-2 hover:bg-gray-100 ">Futsal</a>-->
                         </li>
 
                     </ul>
@@ -99,40 +100,36 @@
                     <!-- Gambar (60% tinggi) -->
                     <div class="row-span-3 relative">
                         <img class="w-full h-full object-cover rounded-t-lg" src="<%=request.getContextPath()%>/assets/c-tra-arena.jpg" alt="House">
-
-                        <button class="absolute top-3 right-3 p-2 bg-white rounded-full shadow">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 text-gray-500">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 21l-9-9 3-3L12 3l9 9-3 3z" />
-                            </svg>
-                        </button>
                     </div>
 
                     <!-- Teks (40% tinggi) -->
                     <div class="row-span-2 p-4">
                         <h3 class="text-sm font-semibold">GOR C-Tra Arena</h3>
                         <p class="text-sm text-gray-500">Jl. Cikutra No.278, Neglasari</p>
-                        <p class="text-sm text-gray-500">11–16 Des</p>
-                        <p class="mt-2 font-semibold">Rp 700.000 per jam</p>
+                        <!--<img class="w-6" src="<%=request.getContextPath()%>/assets/tag.png" alt="alt"/>-->
+                        <p class="text-sm text-gray-500">Lapang basket</p>
+                        <p class="mt-2 font-semibold">Rp 1.500.000 per jam</p>
                     </div>
                 </div>
             </a>
             <!-- Card 2 -->
-            <div class="bg-white rounded-lg shadow">
-                <div class="relative">
-                    <img src="https://via.placeholder.com/300x200" alt="House" class="w-full rounded-t-lg">
-                    <button class="absolute top-3 right-3 p-2 bg-white rounded-full shadow">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 text-gray-500">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 21l-9-9 3-3L12 3l9 9-3 3z" />
-                        </svg>
-                    </button>
+            <a href="facilityDetail.jsp" class="bg-white rounded-lg shadow">
+                <div class="relative grid grid-rows-5">
+                    <!-- Gambar (60% tinggi) -->
+                    <div class="row-span-3 relative">
+                        <img class="w-full h-full object-cover rounded-t-lg" src="<%=request.getContextPath()%>/assets/gor bulu tangkis.jpg" alt="House">
+                    </div>
+
+                    <!-- Teks (40% tinggi) -->
+                    <div class="row-span-2 p-4">
+                        <h3 class="text-sm font-semibold">Gor MSB</h3>
+                        <p class="text-sm text-gray-500">Jl. Sukapura No.166, Mengger</p>
+                        <!--<img class="w-6" src="<%=request.getContextPath()%>/assets/tag.png" alt="alt"/>-->
+                        <p class="text-sm text-gray-500">Lapang Bulu Tangkis</p>
+                        <p class="mt-2 font-semibold">Rp 50.000 per jam</p>
+                    </div>
                 </div>
-                <div class="p-4">
-                    <h3 class="text-sm font-semibold">Tambon Huai Sat Yai, Thailand</h3>
-                    <p class="text-sm text-gray-500">Berjarak 2.222 kilometer</p>
-                    <p class="text-sm text-gray-500">5–10 Jan</p>
-                    <p class="mt-2 font-semibold">Rp754.029 malam</p>
-                </div>
-            </div>
+            </a>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
     </body>
