@@ -68,16 +68,59 @@
 
                 if (selectedValue == '2') {  // Lapangan Basket
                     document.getElementById('basketballFields').style.display = 'block';
-                } else if (selectedValue == '3') {  // Kolam Voli
+                } else if (selectedValue == '3') {  // lapangan batminton
                     document.getElementById('batmintonFields').style.display = 'block';
-                } else if (selectedValue == '4') {  // Kolam Voli
+                } else if (selectedValue == '4') {  // lapangan voli
                     document.getElementById('volleyballFields').style.display = 'block';
-                } else if (selectedValue == '6') {  // Kolam Voli
+                } else if (selectedValue == '6') {  // Kolam renang
                     document.getElementById('swimmingPool').style.display = 'block';
-                }  else {
+                } else {
                     document.getElementById('commonFields').style.display = 'block';
                 }
+                 document.getElementById('fieldImage').addEventListener('change', function () {
+                if (this.files.length > 5) {
+                    alert('Anda hanya dapat mengunggah hingga 5 foto.');
+                    this.value = ''; // Reset input
+                }
+            });
             }
+
+            function addAnnouncement() {
+                const announcementText = document.getElementById('announcementInput').value.trim();
+
+                if (announcementText === "") {
+                    alert("Pengumuman tidak boleh kosong.");
+                    return;
+                }
+
+
+
+                const announcementContainer = document.getElementById('announcements');
+
+                const announcementElement = document.createElement('div');
+                announcementElement.className = 'bg-gray-100 p-4 rounded flex justify-between items-center';
+
+                const textElement = document.createElement('p');
+                textElement.textContent = announcementText;
+
+                const deleteButton = document.createElement('button');
+                deleteButton.className = 'bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600';
+                deleteButton.textContent = 'Hapus';
+                deleteButton.onclick = function () {
+                    if (confirm("Apakah Anda yakin ingin menghapus pengumuman ini?")) {
+                        announcementContainer.removeChild(announcementElement);
+                    }
+                };
+
+                announcementElement.appendChild(textElement);
+                announcementElement.appendChild(deleteButton);
+
+                announcementContainer.appendChild(announcementElement);
+
+                document.getElementById('announcementInput').value = '';
+                alert("Pengumuman berhasil ditambahkan.");
+            }
+
 
             window.onload = function () {
                 loadDates();  // Load dates on page load
@@ -111,11 +154,10 @@
                     <div class="bg-white shadow rounded p-6 mb-6">
                         <h2 class="text-xl font-semibold mb-2">Pengumuman</h2>
                         <div id="announcements" class="text-gray-700 space-y-4">
-                            <div class="bg-gray-100 p-4 rounded flex justify-between items-center">
-                                <p>Belum ada pengumuman.</p>
-                            </div>
+
                         </div>
                     </div>
+
                     <div class="bg-white shadow rounded p-6">
                         <h2 class="text-xl font-semibold mb-2">Analisis Fasilitas, Hari ini: </h2>
                         <p class="text-gray-700">Jumlah Lapangan Terpakai: 5</p>
@@ -127,33 +169,14 @@
                 <section id="addAnnouncement" class="mb-8">
                     <h1 class="text-3xl font-bold mb-4">Tambah Pengumuman</h1>
                     <div class="bg-white shadow rounded p-6">
-                        <form action="/addAnnouncement" method="POST">
-                            <div class="mb-4">
-                                <label for="announcementText" class="block text-gray-700 font-semibold mb-2">Isi Pengumuman</label>
-                                <textarea id="announcementText" name="announcementText" rows="4" class="w-full border border-gray-300 rounded px-3 py-2" required></textarea>
-                            </div>
-                            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Tambah Pengumuman</button>
-                        </form>
+                        <div class="mb-4">
+                            <label for="announcementInput" class="block text-gray-700 font-semibold mb-2">Isi Pengumuman</label>
+                            <textarea id="announcementInput" rows="4" class="w-full border border-gray-300 rounded px-3 py-2" required></textarea>
+                        </div>
+                        <button onclick="addAnnouncement()" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Tambah Pengumuman</button>
                     </div>
                 </section>
 
-                <!-- Manage Announcements Section -->
-                <section id="manageAnnouncements" class="mb-8">
-                    <h1 class="text-3xl font-bold mb-4">Kelola Pengumuman</h1>
-                    <div class="bg-white shadow rounded p-6">
-                        <form action="/deleteAnnouncement" method="POST">
-                            <div class="mb-4">
-                                <label for="announcementId" class="block text-gray-700 font-semibold mb-2">Pilih Pengumuman untuk Dihapus</label>
-                                <select id="announcementId" name="announcementId" class="w-full border border-gray-300 rounded px-3 py-2">
-                                    <option value="1">Pengumuman 1</option>
-                                    <option value="2">Pengumuman 2</option>
-                                    <option value="3">Pengumuman 3</option>
-                                </select>
-                            </div>
-                            <button type="submit" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Hapus Pengumuman</button>
-                        </form>
-                    </div>
-                </section>
 
                 <!-- Add Field Section -->
                 <section id="addField" class="mb-8">
@@ -184,7 +207,7 @@
 
 
                                         <label for="fieldWidth" class="block text-gray-700 font-semibold mb-2">Lebar Lapangan:</label>
-                                        <input type="number" id="fieldWidth" name="fieldWidth" class="w-full border border-gray-300 rounded px-3 py-2" placeholder="Masukkan Lebar Lapangan (contoh 12 x 12 meter)">
+                                        <input type="text" id="fieldWidth" name="fieldWidth" class="w-full border border-gray-300 rounded px-3 py-2" placeholder="Masukkan Lebar Lapangan (contoh 12 x 12 meter)">
                                     </div>
                                 </div>
                                 <!-- Specific Fields -->
@@ -202,13 +225,47 @@
                                         <label for="batmintonHeight" class="block text-gray-700 font-semibold mb-2">Tinggi Net Bulu Tangkis:</label>
                                         <input type="number" id="batmintonHeight" name="batmintonHeight" class="w-full border border-gray-300 rounded px-3 py-2" placeholder="Masukkan Tinggi Net Bulu Tangkis (Dalam Meter)">
                                     </div>
-                                     <div id="swimmingPool" class="extraFields" style="display: none;">
+                                    <div id="swimmingPool" class="extraFields" style="display: none;">
                                         <label for="swimmingPoolHeight" class="block text-gray-700 font-semibold mb-2">Dalam Kolam Renang:</label>
                                         <input type="number" id="swimmingPoolHeight" name="swimmingPoolHeight" class="w-full border border-gray-300 rounded px-3 py-2" placeholder="Masukkan Dalam Kolam renang (Dalam Meter)">
                                     </div>
                                 </div>
                             </div>
+                            
+                             <!-- Form Inputs for Lapangan -->
+                            <div id="formInputs">
+                                <!-- Default Fields -->
+                                <div class="mb-4">
+                                    <div id="commonFields">
 
+
+                                        <label for="fieldWidth" class="block text-gray-700 font-semibold mb-2">Lebar Lapangan:</label>
+                                        <input type="text" id="fieldWidth" name="fieldWidth" class="w-full border border-gray-300 rounded px-3 py-2" placeholder="Masukkan Lebar Lapangan (contoh 12 x 12 meter)">
+                                    </div>
+                                </div>
+                                <!-- Specific Fields -->
+                                <div class="mb-4">
+                                    <div id="basketballFields" class="extraFields" style="display: none;">
+                                        <label for="basketballHeight" class="block text-gray-700 font-semibold mb-2">Tinggi Ranjang Basket:</label>
+                                        <input type="number" id="basketballHeight" name="basketballHeight" class="w-full border border-gray-300 rounded px-3 py-2" placeholder="Masukkan Tinggi Ranjang Basket (Dalam Meter)">
+                                    </div>
+
+                                    <div id="volleyballFields" class="extraFields" style="display: none;">
+                                        <label for="volleyballHeight" class="block text-gray-700 font-semibold mb-2">Tinggi Net Voli:</label>
+                                        <input type="number" id="volleyballHeight" name="volleyballHeight" class="w-full border border-gray-300 rounded px-3 py-2" placeholder="Masukkan Tinggi Net Voli (Dalam Meter)">
+                                    </div>
+                                    <div id="batmintonFields" class="extraFields" style="display: none;">
+                                        <label for="batmintonHeight" class="block text-gray-700 font-semibold mb-2">Tinggi Net Bulu Tangkis:</label>
+                                        <input type="number" id="batmintonHeight" name="batmintonHeight" class="w-full border border-gray-300 rounded px-3 py-2" placeholder="Masukkan Tinggi Net Bulu Tangkis (Dalam Meter)">
+                                    </div>
+                                    <div id="swimmingPool" class="extraFields" style="display: none;">
+                                        <label for="swimmingPoolHeight" class="block text-gray-700 font-semibold mb-2">Dalam Kolam Renang:</label>
+                                        <input type="number" id="swimmingPoolHeight" name="swimmingPoolHeight" class="w-full border border-gray-300 rounded px-3 py-2" placeholder="Masukkan Dalam Kolam renang (Dalam Meter)">
+                                    </div>
+                                </div>
+                            </div>
+                              
+                             <!-- Form  for Lapangan -->
                             <div class="mb-4">
                                 <label for="fieldAddress" class="block text-gray-700 font-semibold mb-2">Alamat Fasilitas</label>
                                 <input type="text" id="fieldAddress" name="fieldAddress" placeholder="Alamat lengkap fasilitas" class="w-full border border-gray-300 rounded px-3 py-2" required>
@@ -220,11 +277,12 @@
                             </div>
                             <div class="mb-4">
                                 <label for="fieldPrice" class="block text-gray-700 font-semibold mb-2">Harga Fasilitas Perjam</label>
-                                <input type="text" id="fieldPrice" name="fieldPrice" placeholder="Misal: Rp.100.000,00" class="w-full border border-gray-300 rounded px-3 py-2" required>
+                                <input type="number" id="fieldPrice" name="fieldPrice" placeholder="Misal: 100.000,00" class="w-full border border-gray-300 rounded px-3 py-2" required>
                             </div>
                             <div class="mb-4">
                                 <label for="fieldImage" class="block text-gray-700 font-semibold mb-2">Foto Fasilitas</label>
-                                <input type="file" id="fieldImage" name="fieldImage" accept="image/*" class="w-full border border-gray-300 rounded px-3 py-2" required>
+                                <input type="file" id="fieldImage" name="fieldImage[]" accept="image/*" class="w-full border border-gray-300 rounded px-3 py-2" multiple required>
+                                <p class="text-sm text-gray-500 mt-1">Anda dapat mengunggah hingga 5 foto sekaligus.</p>
                             </div>
                             <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Tambah Lapangan</button>
                         </form>

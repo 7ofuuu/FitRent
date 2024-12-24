@@ -82,7 +82,7 @@ public class RegisterServlet extends HttpServlet {
                 insertAkun.setString(4, name);
                 insertAkun.setString(5, "0");
 
-                int rowsInserted = insertAkun.executeUpdate();
+                 int rowsInserted = insertAkun.executeUpdate();
 
                 if (rowsInserted > 0) {
                     response.sendRedirect("userHome.jsp");
@@ -95,7 +95,7 @@ public class RegisterServlet extends HttpServlet {
             response.sendRedirect("Error Connection.jsp");
         } catch (SQLException ex) {
             Logger.getLogger(RegisterServlet.class.getName()).log(Level.SEVERE, "Database error", ex);
-//            response.sendRedirect("ErrorSQL.jsp");
+            response.sendRedirect("ErrorSQL.jsp");
         }
-    }   
+    }
 }
