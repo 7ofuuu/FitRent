@@ -234,15 +234,6 @@
                             
                              <!-- Form Inputs for Lapangan -->
                             <div id="formInputs">
-                                <!-- Default Fields -->
-                                <div class="mb-4">
-                                    <div id="commonFields">
-
-
-                                        <label for="fieldWidth" class="block text-gray-700 font-semibold mb-2">Lebar Lapangan:</label>
-                                        <input type="text" id="fieldWidth" name="fieldWidth" class="w-full border border-gray-300 rounded px-3 py-2" placeholder="Masukkan Lebar Lapangan (contoh 12 x 12 meter)">
-                                    </div>
-                                </div>
                                 <!-- Specific Fields -->
                                 <div class="mb-4">
                                     <div id="basketballFields" class="extraFields" style="display: none;">
