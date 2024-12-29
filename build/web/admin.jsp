@@ -177,7 +177,7 @@
                     </div>
                 </section>
 
-
+                <form action="AddFacilityServlet" method="POST">
                 <!-- Add Field Section -->
                 <section id="addField" class="mb-8">
                     <h1 class="text-3xl font-bold mb-4">Tambah Fasilitas</h1>
@@ -279,6 +279,7 @@
                         </form>
                     </div>
                 </section>
+                </form>
 
                 <!-- Schedule Section -->
                 <section id="schedule" class="mb-8">

@@ -79,63 +79,63 @@ public class AddFacilityServlet extends HttpServlet {
             PreparedStatement insertFasilitasTurunan = null;
             if (Integer.parseInt(fieldType) == 1) { //Lapangan Futsal
                 insertFasilitasTurunan = con.prepareStatement(
-                "INSERT INTO fasilitas_lapangan_bola (facilityID, panjang_lapangan, lebar_lapangan) VALUES (?, ?, ?)"
+                "INSERT INTO fasilitas_lapangan_bola (facilityID, lebar_lapangan) VALUES (?, ?)"
                 );
                 insertFasilitasTurunan.setString(1, newfacilityID);
                 insertFasilitasTurunan.setString(2, fieldWidth);
-                insertFasilitasTurunan.setString(3, "0"); // fieldLength
+//                insertFasilitasTurunan.setString(3, "0"); // fieldLength
                 
             } else if (Integer.parseInt(fieldType) == 2) { //Lapangan Basket
                 String basketballHeight = request.getParameter("basketballHeight");
                 
                 insertFasilitasTurunan = con.prepareStatement(
-                "INSERT INTO fasilitas_lapangan_basket (facilityID, panjang_lapangan, lebar_lapangan, tingi_kerangjang) VALUES (?, ?, ?, ?)"
+                "INSERT INTO fasilitas_lapangan_basket (facilityID, lebar_lapangan, tingi_kerangjang) VALUES (?, ?, ?)"
                 );
                 insertFasilitasTurunan.setString(1, newfacilityID);
                 insertFasilitasTurunan.setString(2, fieldWidth);
-                insertFasilitasTurunan.setString(3, "0"); // fieldLength
-                insertFasilitasTurunan.setString(4, basketballHeight);
+//                insertFasilitasTurunan.setString(3, "0"); // fieldLength
+                insertFasilitasTurunan.setString(3, basketballHeight);
                 
             } else if (Integer.parseInt(fieldType) == 3) { //Lapangan Bulu tangkis
                 String batmintonHeight = request.getParameter("batmintonHeight");
                 
                 insertFasilitasTurunan = con.prepareStatement(
-                "INSERT INTO fasilitas_lapangan_bulu_tangkis (facilityID, panjang_lapangan, lebar_lapangan, tinggi_net_bulu_tangkis) VALUES (?, ?, ?, ?)"
+                "INSERT INTO fasilitas_lapangan_bulu_tangkis (facilityID, lebar_lapangan, tinggi_net_bulu_tangkis) VALUES (?, ?, ?)"
                 );
                 insertFasilitasTurunan.setString(1, newfacilityID);
                 insertFasilitasTurunan.setString(2, fieldWidth);
-                insertFasilitasTurunan.setString(3, "0"); // fieldLength
-                insertFasilitasTurunan.setString(4, batmintonHeight);
+//                insertFasilitasTurunan.setString(3, "0"); // fieldLength
+                insertFasilitasTurunan.setString(3, batmintonHeight);
                 
             } else if (Integer.parseInt(fieldType) == 4) { //Lapangan Voli
                 String volleyballHeight = request.getParameter("volleyballHeight");
                 
                 insertFasilitasTurunan = con.prepareStatement(
-                "INSERT INTO fasilitas_lapangan_voli (facilityID, panjang_lapangan, lebar_lapangan, tinggi_net_voli) VALUES (?, ?, ?, ?)"
+                "INSERT INTO fasilitas_lapangan_voli (facilityID, lebar_lapangan, tinggi_net_voli) VALUES (?, ?, ?)"
                 );
                 insertFasilitasTurunan.setString(1, newfacilityID);
                 insertFasilitasTurunan.setString(2, fieldWidth);
-                insertFasilitasTurunan.setString(3, "0"); // fieldLength
-                insertFasilitasTurunan.setString(4, volleyballHeight);
+//                insertFasilitasTurunan.setString(3, "0"); // fieldLength
+                insertFasilitasTurunan.setString(3, volleyballHeight);
                 
             } else if (Integer.parseInt(fieldType) == 5) { //Lapangan Lari
                 insertFasilitasTurunan = con.prepareStatement(
-                "INSERT INTO fasilitas_lapangan_lari (facilityID, panjang_lapangan, lebar_lapangan) VALUES (?, ?, ?)"
+                "INSERT INTO fasilitas_lapangan_lari (facilityID, lebar_lapangan) VALUES (?, ?)"
                 );
                 insertFasilitasTurunan.setString(1, newfacilityID);
                 insertFasilitasTurunan.setString(2, fieldWidth);
-                insertFasilitasTurunan.setString(3, "0"); // fieldLength
+//                insertFasilitasTurunan.setString(3, "0"); // fieldLength
                 
             } else if (Integer.parseInt(fieldType) == 6) { //Lapangan Renang
                 String swimmingPoolHeight = request.getParameter("swimmingPoolHeight");
                 
                 insertFasilitasTurunan = con.prepareStatement(
-                "INSERT INTO fasilitas_kolam_renang (facilityID, panjang_lapangan, lebar_lapangan, kedalaman_kolam) VALUES (?, ?, ?, ?)"
+                "INSERT INTO fasilitas_kolam_renang (facilityID, lebar_lapangan, kedalaman_kolam) VALUES (?, ?, ?)"
                 );
                 insertFasilitasTurunan.setString(1, newfacilityID);
                 insertFasilitasTurunan.setString(2, fieldWidth);
-                insertFasilitasTurunan.setString(3, "0"); // fieldLength
-                insertFasilitasTurunan.setString(4, swimmingPoolHeight);
+//                insertFasilitasTurunan.setString(3, "0"); // fieldLength
+                insertFasilitasTurunan.setString(3, swimmingPoolHeight);
             } else {
                 
             }
