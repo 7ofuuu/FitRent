@@ -33,12 +33,19 @@
                         <dd class="text-gray-600">ABC123XYZ</dd>
                     </dl>
                 </div>
-                <div class="flex justify-center items-center py-6">
-                    <button 
-                        class="bg-green-600 text-white py-2 px-4 rounded shadow hover:bg-sky-600" 
-                        onclick="window.location.href = '/FitrentApp/userHome.jsp';">
-                        Return to Home
-                    </button>
+                <div class= "flex justify-center items-center ">
+                    <div class="flex justify-center items-center py-6">
+                        <button 
+                            class="bg-green-600 text-white py-2 px-4 rounded shadow hover:bg-sky-600" 
+                            onclick="window.location.href = '/FitrentApp/userHome.jsp';">
+                            Return to Home
+                        </button>
+                        <button 
+                            class="mx-10 bg-red-600 text-white py-2 px-4 rounded shadow hover:bg-sky-600" 
+                            onclick="window.location.href = '/FitrentApp/DownloadStrukServlet';">
+                            Download Struk
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
