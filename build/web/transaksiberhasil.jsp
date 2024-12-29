@@ -26,7 +26,7 @@
                 <div class="bg-gray-200 rounded-md p-4">
                     <dl>
                         <dt class="font-bold text-gray-800">Amount Paid:</dt>
-                        <dd class="text-gray-600">$100.00</dd>
+                        <dd class="text-gray-600">Rp. 3.000.000</dd>
                         <dt class="font-bold text-gray-800">Date & Time:</dt>
                         <dd class="text-gray-600">January 22, 2024, 10:30 AM</dd>
                         <dt class="font-bold text-gray-8 00">Transaction ID:</dt>
@@ -34,14 +34,14 @@
                     </dl>
                 </div>
                 <div class= "flex justify-center items-center ">
-                    <div class="flex justify-center items-center py-6">
+                    <div class="w-2/5 flex justify-around items-center py-6">
                         <button 
                             class="bg-green-600 text-white py-2 px-4 rounded shadow hover:bg-sky-600" 
                             onclick="window.location.href = '/FitrentApp/userHome.jsp';">
                             Return to Home
                         </button>
                         <button 
-                            class="mx-10 bg-red-600 text-white py-2 px-4 rounded shadow hover:bg-sky-600" 
+                            class="bg-red-600 text-white py-2 px-4 rounded shadow hover:bg-sky-600" 
                             onclick="window.location.href = '/FitrentApp/DownloadStrukServlet';">
                             Download Struk
                         </button>

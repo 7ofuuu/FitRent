@@ -73,7 +73,7 @@ public class DownloadStrukServlet extends HttpServlet {
             table.addCell("Nama Fasilitas:");
             table.addCell("GOR AHMAD");
             table.addCell("Jumlah Bayar:");
-            table.addCell("$100.00");
+            table.addCell("Rp 100.000");
             table.addCell("Hari & Waktu:");
             table.addCell("January 22, 2024, 10:30 AM");
             table.addCell("Lama Sewa:");

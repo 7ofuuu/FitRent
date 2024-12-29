@@ -38,12 +38,12 @@
                     <div>
                         <h4 class="font-semibold text-lg">Bill To</h4>
                         <address class="text-sm text-gray-600">
-                            <strong>Mason Carter</strong><br>
-                            7657 NW Prairie View Rd<br>
-                            Kansas City, Mississippi, 64151<br>
-                            United States<br>
-                            Phone: (816) 741-5790<br>
-                            Email: email@client.com
+                            <strong>Safaat Sukadis</strong><br>
+                            Jl. Sukapura No. 1, Terusan Buahbatu, Bojongsoang.<br>
+                            Kota Bandung, Jawa Barat, 40257<br>
+                            Indonesia<br>
+                            Phone: +62 862634251342<br>
+                            Email: Sukadismantap@gmail.com
                         </address>
                     </div>
                     <div>
@@ -86,34 +86,34 @@
                             <tr>
                                 <td class="border border-gray-200 px-4 py-2">2</td>
                                 <td class="border border-gray-200 px-4 py-2">Lapangan A</td>
-                                <td class="border border-gray-200 px-4 py-2 text-right">75</td>
-                                <td class="border border-gray-200 px-4 py-2 text-right">150</td>
+                                <td class="border border-gray-200 px-4 py-2 text-right">7000</td>
+                                <td class="border border-gray-200 px-4 py-2 text-right">14000</td>
                             </tr>
                             <tr>
                                 <td class="border border-gray-200 px-4 py-2">1</td>
                                 <td class="border border-gray-200 px-4 py-2">Lapangan B</td>
-                                <td class="border border-gray-200 px-4 py-2 text-right">29</td>
-                                <td class="border border-gray-200 px-4 py-2 text-right">29</td>
+                                <td class="border border-gray-200 px-4 py-2 text-right">10000</td>
+                                <td class="border border-gray-200 px-4 py-2 text-right">10000</td>
                             </tr>
                             <tr>
                                 <td class="border border-gray-200 px-4 py-2">4</td>
                                 <td class="border border-gray-200 px-4 py-2">Lapangan C</td>
-                                <td class="border border-gray-200 px-4 py-2 text-right">32</td>
-                                <td class="border border-gray-200 px-4 py-2 text-right">128</td>
+                                <td class="border border-gray-200 px-4 py-2 text-right">5000</td>
+                                <td class="border border-gray-200 px-4 py-2 text-right">20000</td>
                             </tr>
                             <tr>
                                 <td class="border border-gray-200 px-4 py-2">1</td>
-                                <td class="border border-gray-200 px-4 py-2">Lapangam D</td>
-                                <td class="border border-gray-200 px-4 py-2 text-right">55</td>
-                                <td class="border border-gray-200 px-4 py-2 text-right">55</td>
+                                <td class="border border-gray-200 px-4 py-2">Lapangan D</td>
+                                <td class="border border-gray-200 px-4 py-2 text-right">30000</td>
+                                <td class="border border-gray-200 px-4 py-2 text-right">30000</td>
                             </tr>
                             <tr>
                                 <td colspan="3" class="border border-gray-200 px-4 py-2 text-right">Subtotal</td>
-                                <td class="border border-gray-200 px-4 py-2 text-right">362</td>
+                                <td class="border border-gray-200 px-4 py-2 text-right">74000</td>
                             </tr>
                             <tr class="font-bold">
                                 <td colspan="3" class="border border-gray-200 px-4 py-2 text-right uppercase">Total</td>
-                                <td class="border border-gray-200 px-4 py-2 text-right">Rp 495.1</td>
+                                <td class="border border-gray-200 px-4 py-2 text-right">Rp 74000</td>
                             </tr>
                         </tbody>
                     </table>
@@ -123,7 +123,7 @@
                     
                     <button 
                         class="bg-green-600 text-white py-2 px-4 rounded shadow hover:bg-sky-600" 
-                        onclick="window.location.href = '/FitrentApp/transaksiBerhasil.jsp';">
+                        onclick="window.location.href = '/FitrentApp/transaksiberhasil.jsp';">
                         Konfirmasi Bayar
                     </button>
                 </div>

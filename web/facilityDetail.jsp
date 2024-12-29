@@ -22,7 +22,7 @@
             <div class="flex items-center space-x-2">
                 <!--<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_B%C3%A9lo.svg/1024px-Airbnb_Logo_B%C3%A9lo.svg.png" alt="Logo" class="h-6">-->
                 <!--<span class="text-lg font-semibold">Fitrent</span>-->
-                <a href="index.jsp"> <img class="w-24" src="<%=request.getContextPath()%>/assets/logo.svg" alt="alt"/></a>
+                <a href="userHome.jsp"> <img class="w-24" src="<%=request.getContextPath()%>/assets/logo.svg" alt="alt"/></a>
             </div>
 
             <!-- Search bar -->
@@ -53,8 +53,8 @@
                     <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
                         <li>
                             <a href="#" class="text-black block px-4 py-2 hover:bg-gray-100 ">Logout</a>
+                            <a href="lihatPesanan.jsp" class="text-black block px-4 py-2 hover:bg-gray-100 ">Lihat Pesanan</a>
                         </li>
-
                     </ul>
                 </div>
             </div>
@@ -88,7 +88,7 @@
                 <h2 class="text-xl font-bold mb-4">Jl. Cikutra No.278, Neglasari, Kec. Cibeunying Kaler, Kota Bandung, Jawa Barat 40124</h2>
                 <p class="text-gray-700 mb-4">Kapasitas penonton 1500 · Full Court</p>
                 <div class="grid grid-cols-2 gap-4">
-                    <div>
+                    <div class="w-1/2">
                         <h3 class="text-lg font-bold mb-2">Detail Fasilitas</h3>
                         <ul class="list-disc list-inside text-gray-700">
                             <li>Jumlah Lapangan: 1</li>
@@ -97,62 +97,63 @@
                             <li>Indoor</li>
                         </ul>
                     </div>
-                    <div>
-                        <!--                        <h3 class="text-lg font-bold mb-2">Kebijakan</h3>
-                                                <ul class="list-disc list-inside text-gray-700">
-                                                    <li>Check-in: 14:00</li>
-                                                    <li>Check-out: 11:00</li>
-                                                    <li>Peraturan rumah: Tidak boleh merokok, Tidak ada hewan peliharaan</li>
-                                                </ul>-->
-                    </div>
-                </div>
-            </section>
-
-            <div class="flex space-x-4">
-                <!-- Booking Section -->
-                <section class="bg-white p-6 rounded-lg shadow w-1/2">
-                    <h2 class="text-xl font-bold mb-4">Pemesanan</h2>
+                    <div class="">
+                        <h2 class="text-xl font-bold mb-4">Pemesanan</h2>
                     <p class="text-gray-700 mb-4">Harga per jam: Rp1.500.000</p>
                     <div class="flex items-center space-x-4">
                         <input type="date" class="border border-gray-300 p-2 rounded-lg">
                         <!--<input type="date" class="border border-gray-300 p-2 rounded-lg">-->
-                        <button class="bg-blue-600 text-white px-4 py-2 rounded-lg">Pesan</button>
+                        <form class="max-w-[16rem] grid grid-cols-2 gap-4">
+                            <div>
+                                <!--<label for="start-time" class="block text-sm font-medium text-gray-900 ">Start time:</label>-->
+                                <div class="relative">
+                                    <div class="absolute inset-y-0 end-0 top-0 flex items-center pe-3.5 pointer-events-none">
+                                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                        <!--<path fill-rule="evenodd" d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm11-4a1 1 0 1 0-2 0v4a1 1 0 0 0 .293.707l3 3a1 1 0 0 0 1.414-1.414L13 11.586V8Z" clip-rule="evenodd"/>-->
+                                        </svg>
+                                    </div>
+                                    <input type="time" id="start-time" class="bg-gray-50 border leading-none border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500" min="09:00" max="18:00" value="00:00" required />
+                                </div>
+                            </div>
+
+                            <div>
+                                <!--<label for="end-time" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">End time:</label>-->
+                                <div class="relative">
+                                    <div class="absolute inset-y-0 end-0 top-0 flex items-center pe-3.5 pointer-events-none">
+                                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                        <!--<path fill-rule="evenodd" d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm11-4a1 1 0 1 0-2 0v4a1 1 0 0 0 .293.707l3 3a1 1 0 0 0 1.414-1.414L13 11.586V8Z" clip-rule="evenodd"/>-->
+                                        </svg>
+                                    </div>
+                                    <input type="time" id="end-time" class="bg-gray-50 border leading-none border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-blue-500 dark:focus:border-blue-500" min="09:00" max="18:00" value="00:00" required />
+                                </div>
+                            </div>
+                        </form>
+                        <a href="invoice.jsp" class="bg-blue-600 text-white px-4 py-2 rounded-lg">Pesan</a>
                     </div>
-                </section>
-
-                <!-- Reviews Section -->
-                <section class="bg-white p-6 rounded-lg shadow w-1/2">
-                    <h2 class="text-xl font-bold mb-4">Ulasan</h2>
-                    <p class="text-gray-700 mb-4">Rating: 4.84</p>
-                    <ul class="list-disc list-inside text-gray-700">
-                        <li>Kamar mandinya bersih</li>
-                        <li>Lapangannya tidak licin</li>
-                    </ul>
-                </section>
-            </div>
-
-
-
-
-
+                    </div>
+                </div>
+            </section>
         </main>
 
-        <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
-        <script>
-            function selectMenu(selectedItem) {
-                // Remove active styles from all buttons
-                const menuItems = document.querySelectorAll(".menu-item");
-                menuItems.forEach(item => {
-                    item.classList.remove("font-medium", "border-black", "text-black");
-                    item.classList.add("text-gray-500");
-                    item.classList.remove("border-b-2");
-                });
+        <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js">
+            document.addEventListener("DOMContentLoaded", function () {
+                const tabs = document.querySelectorAll(".tab");
+                const content = document.getElementById("content");
 
-                // Add active styles to the selected button
-                selectedItem.classList.remove("text-gray-500");
-                selectedItem.classList.add("font-medium", "border-b-2", "border-black", "text-black");
-            }
+                tabs.forEach((tab) => {
+                    tab.addEventListener("click", function () {
+                        // Remove active class from all tabs
+                        tabs.forEach((t) => t.classList.remove("active"));
+                        // Add active class to the clicked tab
+                        this.classList.add("active");
+                    });
+                });
+            });
 
         </script>
+        <script>
+
+        </script>
+        <script src="./js/script.js"></script>
     </body>
 </html>

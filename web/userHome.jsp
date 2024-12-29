@@ -51,6 +51,7 @@
                     <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
                         <li>
                             <a href="#" class="text-black block px-4 py-2 hover:bg-gray-100 ">Logout</a>
+                            <a href="lihatPesanan.jsp" class="text-black block px-4 py-2 hover:bg-gray-100 ">Lihat Pesanan</a>
                         </li>
 
                     </ul>
@@ -61,12 +62,12 @@
         <div class="flex items-center justify-between bg-white border-b">
             <div class="container ml-20  py-4">
                 <div class="flex space-x-4 overflow-x-auto no-scrollbar">
-                    <button onclick="selectMenu(this)" class="menu-item flex-none text-sm font-medium border-b-2 border-black px-4 py-2">ALL</button>
-                    <button onclick="selectMenu(this)" class="menu-item flex-none text-sm text-gray-500 px-4 py-2">Basket</button>
-                    <button onclick="selectMenu(this)" class="menu-item flex-none text-sm text-gray-500 px-4 py-2">Bulu Tangkis</button>
-                    <button onclick="selectMenu(this)" class="menu-item flex-none text-sm text-gray-500 px-4 py-2">Futsal</button>
-                    <button onclick="selectMenu(this)" class="menu-item flex-none text-sm text-gray-500 px-4 py-2">Track Lari</button>
-                    <button onclick="selectMenu(this)" class="menu-item flex-none text-sm text-gray-500 px-4 py-2">Volly</button>
+                    <a href="#all" onclick="selectMenu(this)" class="tab active menu-item flex-none text-sm text-gray-500 px-4 py-2">ALL</a>
+                    <a href="#basket" id="bultang-tab" onclick="selectMenu(this)" class="tab menu-item flex-none text-sm text-gray-500 px-4 py-2">Basket</a>
+                    <a href="#bultang" onclick="selectMenu(this)" class="tab menu-item flex-none text-sm text-gray-500 px-4 py-2">Bulu Tangkis</a>
+                    <a href="#Futsal" onclick="selectMenu(this)" class="tab menu-item flex-none text-sm text-gray-500 px-4 py-2">Futsal</a>
+                    <a href="#Tracklari" onclick="selectMenu(this)" class="tab menu-item flex-none text-sm text-gray-500 px-4 py-2">Track Lari</a>
+                    <a href="#voly" onclick="selectMenu(this)" class="tab menu-item flex-none text-sm text-gray-500 px-4 py-2">Volly</a>
                 </div>
 
             </div>
