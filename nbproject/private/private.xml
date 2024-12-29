@@ -3,16 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/damai/FitRent/web/transaksi.jsp</file>
+            <file>file:/C:/Users/damai/FitRent/web/loginModal.jsp</file>
+            <file>file:/C:/Users/damai/FitRent/web/invoice.jsp</file>
+            <file>file:/C:/Users/damai/FitRent/web/admin.jsp</file>
+            <file>file:/C:/Users/damai/FitRent/web/testFailed.jsp</file>
+            <file>file:/C:/Users/damai/FitRent/web/userHome.jsp</file>
             <file>file:/C:/Users/damai/FitRent/src/java/controllers/RegisterServlet.java</file>
             <file>file:/C:/Users/damai/FitRent/web/index.jsp</file>
-            <file>file:/C:/Users/damai/FitRent/web/loginModal.jsp</file>
             <file>file:/C:/Users/damai/FitRent/src/java/controllers/LoginServlet.java</file>
-            <file>file:/C:/Users/damai/FitRent/web/admin.jsp</file>
+            <file>file:/C:/Users/damai/FitRent/web/transaksiberhasil.jsp</file>
             <file>file:/C:/Users/damai/FitRent/web/testSuccess.jsp</file>
-            <file>file:/C:/Users/damai/FitRent/web/testFailed.jsp</file>
             <file>file:/C:/Users/damai/FitRent/web/registerPage.jsp</file>
-            <file>file:/C:/Users/damai/FitRent/src/java/controllers/InvoiceDownloadServlet.java</file>
             <file>file:/C:/Users/damai/FitRent/web/loginPage.jsp</file>
             <file>file:/C:/Users/damai/FitRent/web/WEB-INF/web.xml</file>
         </group>
